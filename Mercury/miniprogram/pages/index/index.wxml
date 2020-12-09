@@ -55,5 +55,12 @@
     </navigator>
   </view>
 
+  <!-- 测试 -->
+  <view class="uploader">
+    <navigator url="../test/test" open-type="navigate" class="uploader-text">
+      <text>测试</text>
+    </navigator>
+  </view>
+
 
 </view>
