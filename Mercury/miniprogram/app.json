@@ -1,25 +1,17 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room"
+  "pages": [   
+    "pages/US/US",
+    "pages/second/second"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#0077FF",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#0077FF",
+    "navigationBarTitleText": "Mercury",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "darkmode": true
+
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"
