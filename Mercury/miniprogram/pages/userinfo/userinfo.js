@@ -1,22 +1,41 @@
 // pages/userinfo/userinfo.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    username: '用户名'
+    username: '用户名',
+    userInfo: {},
+    avatarUrl:""
   },
   globalData: {
 
   },
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
+    this.setData({
+      openid: app.globalData.openid,
+      avatarUrl:app.globalData.avatarUrl,
+      userInfo:app.globalData.userInfo,
+      username:app.globalData.userInfo.nickName
+    })
+   // console.log(openid)
   },
 
+  user_image_preview(){
+    wx-wx.previewImage({
+      urls: [this.data.avatarUrl],
+      current: 'current',
+    })
+
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

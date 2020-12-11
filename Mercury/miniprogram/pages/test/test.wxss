@@ -1,14 +1,1 @@
 /* pages/test/test.wxss */
-.image-today image{
-  position: absolute;
-  left: 54rpx;
-  top: 78rpx;
-  width: 120rpx;
-  height: 34rpx;
- }
- page {
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}

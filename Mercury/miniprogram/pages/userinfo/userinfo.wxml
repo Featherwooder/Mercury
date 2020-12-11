@@ -8,7 +8,7 @@
 </view>
 <view>
   <text class="name-text">{{username}}</text>
-  <image class="head-image" ></image>
+  <image class="head-image" src="{{avatarUrl}}" bindtap="user_image_preview"></image>
 </view>
 <view>
   <navigator url="../test/test" open-type="navigate">
