@@ -1,17 +1,28 @@
 {
-  "pages": [   
-    "pages/US/US",
-    "pages/second/second"
+  "pages": [
+   
+    "pages/index1/index1",
+    "pages/userinfo/userinfo",
+    "pages/second/second",
+    "pages/test/test",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid"
   ],
   "window": {
-    "backgroundColor": "#0077FF",
+    "backgroundColor": "#0094ff",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#0077FF",
     "navigationBarTitleText": "Mercury",
-    "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true,
-    "darkmode": true
-
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

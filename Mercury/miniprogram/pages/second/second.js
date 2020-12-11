@@ -1,4 +1,5 @@
 // pages/second/second.js
+const app=getApp()
 var util=require('../../util/util');//调用util中的获取时间函数
 Page({
 
@@ -6,6 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    avatarUrl: '',
+    userInfo: {},
+    openid:'',
+
     hidden1:true,
     hidden2:false,    
     hidden3:true,
@@ -121,17 +126,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-
 
     var time = util.formatTime(new Date());
     // 再通过setData更改Page()里面的data，动态更新页面的数据
     this.setData({
-      time: time
+      time: time,
+      avatarUrl:app.globalData.avatarUrl,
+      userInfo:app.globalData.userInfo,
     });
 
   },
-
+  user_Info(){
+    wx-wx.navigateTo({
+      url: '/pages/userinfo/userinfo',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

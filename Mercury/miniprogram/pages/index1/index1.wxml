@@ -1,0 +1,39 @@
+<view class="index_head">
+    <image  class="index_image1" src="/images/1_welcome.png" mode="" lazy-load="false" />
+      
+</view>
+<view>
+  <swiper class="index_swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" >
+    <swiper-item>
+      <image src="/images/1.jpg"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/2.jpg"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/3.jpg"/>
+    </swiper-item>
+  </swiper>
+</view>
+<view>
+  <view wx:if="{{!avatarUrl}}">
+  <button 
+    size="default"
+  
+    class="userinfo-avatar"
+    open-type="getUserInfo"
+    bindgetuserinfo="onGetUserInfo"
+  >点击通过微信登录</button>
+  </view>
+  <view wx:else>
+  <button 
+    size="default"
+  
+    class="userinfo-avatar"
+    open-type="getUserInfo"
+    bindgetuserinfo="onGetUserInfo"
+  >点击进入习惯星球</button>
+  </view>
+</view>
+  
+
