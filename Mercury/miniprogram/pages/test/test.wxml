@@ -1,11 +1,10 @@
 <!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+  <view class="image-today">
+    <image src="../../images/2_today.png"></image>
+  </view>
 <view class="container">
 
-  <view class="uploader">
-    <navigator url="../index/index" open-type="navigate" class="uploader-text">
-      <text>首页</text>
-    </navigator>
-  </view>
+
+
 
 </view>

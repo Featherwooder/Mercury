@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    userInfo: {} ,
+    logged: false,
+    takeSession: false,
+    requestResult: ''
   },
 
   /**
@@ -23,8 +27,8 @@ Page({
                 avatarUrl: res.userInfo.avatarUrl,
                 userInfo: res.userInfo
               })
-              wx.switchTab({
-                url: '../index/index',
+              wx.navigateTo({
+                url: '../test/test',
               })
             }
           })
@@ -32,7 +36,15 @@ Page({
       }
     })
   },
-
+  onGetUserInfo: function(e) {
+    if (!this.data.logged && e.detail.userInfo) {
+      this.setData({
+        logged: true,
+        avatarUrl: e.detail.userInfo.avatarUrl,
+        userInfo: e.detail.userInfo
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

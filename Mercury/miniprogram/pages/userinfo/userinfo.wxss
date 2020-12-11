@@ -1,0 +1,116 @@
+/* pages/userinfo/userinfo.wxss */
+page {
+  background: #ffffff;
+}
+
+.bais-image{
+  width: 750rpx;
+  height: 388rpx;
+}
+
+.user-image{
+  position: absolute;
+  left: 76rpx;
+  top: 520rpx;
+  width: 54rpx;
+  height: 56rpx;
+}
+.image-pointer{
+  position: absolute;
+  left: 610rpx;
+  width: 40rpx;
+  height: 44rpx;
+}
+.user-text{
+  position: absolute;
+  left: 162rpx;
+  width: 64px;
+  height: 22px;
+  color: rgba(94, 94, 94, 100);
+  font-size: 16px;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.user-image, #help-image{
+  position: absolute;
+  top: 520rpx;
+}
+.user-text, #help-text{
+  position: absolute;
+  top: 526rpx;
+  width: 375px;
+  height: 73px;
+  line-height: 20px;
+}
+.image-pointer, #help-pointer{
+  position: absolute;
+  top: 526rpx;
+}
+
+.user-image, #pen-image{
+  position: absolute;
+  top: 668rpx;
+}
+.user-text, #pen-text{
+  position: absolute;
+  top: 674rpx;
+}
+.image-pointer, #pen-pointer{
+  position: absolute;
+  top: 674rpx;
+}
+
+.user-image, #auth-image{
+  position: absolute;
+  top: 816rpx;
+}
+.user-text, #auth-text{
+  position: absolute;
+  top: 822rpx;
+}
+.image-pointer, #auth-pointer{
+  position: absolute;
+  top: 822rpx;
+}
+
+.button-contact{
+  position: absolute;
+  top: 1072rpx;
+  left: 188rpx;
+  font-size: 32rpx;
+  background-color: transparent;
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.call-image{
+  position: absolute;
+  top:1086rpx;
+  left: 236rpx;
+  width: 40rpx;
+  height: 44rpx;
+}
+.circle-image{
+  position: absolute;
+  left: 492rpx;
+  top: 122rpx;
+  width: 220rpx;
+  height: 220rpx;
+}
+.name-text {
+  position: absolute;
+  top: 92rpx;
+  left: 74rpx;
+  width: 150rpx;
+  height: 70rpx;
+  color: rgba(255, 255, 255, 100);
+  font-size: 50rpx;
+}
+.head-image{
+  position: absolute;
+  left: 500.5rpx;
+  top: 130.5rpx;
+  width: 204rpx;
+  height: 204rpx;
+  border-radius: 120px;
+}

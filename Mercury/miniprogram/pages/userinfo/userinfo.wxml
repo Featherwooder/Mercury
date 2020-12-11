@@ -1,0 +1,42 @@
+<!--pages/userinfo/userinfo.wxml-->
+
+<view class="container">
+
+<view>
+  <image class="bais-image" src="../../images/3_bias.png"></image>
+  <image class="circle-image" src="../../images/3_circle.png"></image>
+</view>
+<view>
+  <text class="name-text">{{username}}</text>
+  <image class="head-image" ></image>
+</view>
+<view>
+  <navigator url="../test/test" open-type="navigate">
+    <text class="user-text" id="help-text">使用手册</text>
+    <image class="user-image" id="help-image" src="../../images/3_help.png"></image>
+    <image class="image-pointer" id="help-pointer" src="../../images/3_pointer.png"></image>
+  </navigator>
+</view> 
+<view>
+  <navigator url="../test/test" open-type="navigate">
+    <image class="user-image" id="pen-image" src="../../images/3_pen.png"></image>
+    <text class="user-text" id="pen-text">意见反馈</text>
+    <image class="image-pointer" id="pen-pointer" src="../../images/3_pointer.png"></image>
+  </navigator>
+</view>
+<view>
+  <navigator url="../test/test" open-type="navigate">
+    <image class="user-image" id="auth-image" src="../../images/3_authors.png"></image>
+    <text class="user-text" id="auth-text">关于我们</text>
+    <image class="image-pointer" id="auth-pointer" src="../../images/3_pointer.png"></image>
+  </navigator>
+</view>
+
+<view>
+  <image class="call-image" id="call-image" src="../../images/3_call.png"></image>
+  <button class="button-contact"  open-type="contact" bindcontact="handleContact" opacity:0 >
+    联系客服
+  </button>
+</view>
+
+</view>

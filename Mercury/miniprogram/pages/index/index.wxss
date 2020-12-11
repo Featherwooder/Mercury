@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 page {
-  background: #f6f6f6;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
