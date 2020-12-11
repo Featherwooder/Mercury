@@ -5,6 +5,7 @@
     "pages/userinfo/userinfo",
     "pages/second/second",
     "pages/test/test",
+    "pages/userBook/userBook",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",

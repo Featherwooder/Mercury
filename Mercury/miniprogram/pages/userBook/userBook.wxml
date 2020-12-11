@@ -1,0 +1,10 @@
+<!--pages/userBook/userBook.wxml-->
+<text>pages/userBook/userBook.wxml</text>
+
+<view>
+  <navigator url="../test/test" open-type="navigate">
+    <text class="user-text" id="help-text">使用手册</text>
+    <image class="user-image" id="help-image" src="../../images/3_help.png"></image>
+    <image class="image-pointer" id="help-pointer" src="../../images/3_pointer.png"></image>
+  </navigator>
+</view> 
