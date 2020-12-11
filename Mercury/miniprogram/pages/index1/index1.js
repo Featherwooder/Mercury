@@ -1,4 +1,5 @@
 // pages/index1/index1.js
+const app = getApp()
 Page({
 
   /**
@@ -11,6 +12,16 @@ Page({
     requestResult: '',
     avatarUrl:""
   },
+  globalData:{
+
+
+  },
+  handlePreviewImage(){
+    wx-wx.previewImage({
+      urls:[this.data.avatarUrl] ,
+      current: 'current',
+    })
+  },
   onLoad: function() {
     // 获取用户信息
     wx.getSetting({
@@ -19,11 +30,19 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
+              app.globalData.avatarUrl= res.userInfo.avatarUrl,
+              app.globalData.userInfo= res.userInfo,
               this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
+                avatarUrl:res.userInfo.avatarUrl,
+                userInfo:res.userInfo
               })
+             /* wx-wx.setStorage({
+                data: avatarUrl,
+                key: 'avatarUrl',
+                
+              })*/
             }
+            
           })
         }
       }
@@ -33,6 +52,8 @@ Page({
   onGetUserInfo: function(e) {
     console.log(e)
     if (!this.data.logged && e.detail.userInfo) {
+      app.globalData.avatarUrl= e.detail.userInfo.avatarUrl,
+      app.globalData.userInfo= e.detail.userInfo,
       this.setData({
         logged: true,
         avatarUrl: e.detail.userInfo.avatarUrl,
@@ -40,7 +61,7 @@ Page({
       })        
       if(this.data.logged){
         wx.redirectTo({
-          url: '/pages/index/index',
+          url: '/pages/second/second',
         })
       }     
     }

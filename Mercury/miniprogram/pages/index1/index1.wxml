@@ -4,7 +4,7 @@
 </view>
 <view>
   <swiper class="index_swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" >
-    <swiper-item bindtap="handlePreviewImage">
+    <swiper-item>
       <image src="/images/1.jpg"/>
     </swiper-item>
     <swiper-item>
@@ -15,22 +15,25 @@
     </swiper-item>
   </swiper>
 </view>
-
-<view wx:if="{{!avatarUrl}}">
+<view>
+  <view wx:if="{{!avatarUrl}}">
   <button 
     size="default"
-   
+  
     class="userinfo-avatar"
     open-type="getUserInfo"
     bindgetuserinfo="onGetUserInfo"
   >点击通过微信登录</button>
-</view>
-<view wx:else>  
+  </view>
+  <view wx:else>
   <button 
     size="default"
+  
     class="userinfo-avatar"
     open-type="getUserInfo"
     bindgetuserinfo="onGetUserInfo"
-  >进入习惯星球</button>
+  >点击进入习惯星球</button>
+  </view>
 </view>
+  
 

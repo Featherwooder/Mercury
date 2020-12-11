@@ -1,6 +1,10 @@
 {
   "pages": [
+   
     "pages/index1/index1",
+    "pages/userinfo/userinfo",
+    "pages/second/second",
+    "pages/test/test",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -11,14 +15,12 @@
     "pages/openapi/openapi",
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room"
+    "pages/openapi/cloudid/cloudid"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#0094ff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#0077ff",
+    "navigationBarBackgroundColor": "#0077FF",
     "navigationBarTitleText": "Mercury",
     "navigationBarTextStyle": "white"
   },

@@ -13,7 +13,12 @@ App({
         traceUser: true,
       })
     }
-
-    this.globalData = {}
+//375 * 667 
+//208 *69
+    this.globalData = {
+      openid: '',
+      userInfo: {},
+      avatarUrl:""
+    }
   }
 })

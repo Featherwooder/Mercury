@@ -20,9 +20,11 @@ image{
 }
 
 .userinfo-avatar {
-    position: absolute;
-    left:187.5rpx;
-    top:1066rpx;
+    position: relative;
+    
+    margin-left:187.5rpx;
+    top:100rpx;
     color: #fff;
     background-color: #0077ff;
-  }
+    justify-content: center;
+}
