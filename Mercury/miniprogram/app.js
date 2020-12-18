@@ -21,5 +21,5 @@ App({
       userInfo: {},
       avatarUrl:""
     }
-  }
+  },
 })

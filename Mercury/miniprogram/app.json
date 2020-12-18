@@ -6,6 +6,7 @@
     "pages/second/second",
     "pages/test/test",
     "pages/index/index",
+    "pages/tomatotimer/tomatotimer",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",

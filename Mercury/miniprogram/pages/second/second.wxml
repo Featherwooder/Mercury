@@ -1,5 +1,8 @@
 <!--pages/second/second.wxml-->
-<text class="choose1"  animation="{{ani1}}">\n番茄\n计时</text>
+<navigator url="../tomatotimer/tomatotimer" open-type="navigate">
+  <text class="choose1"  animation="{{ani1}}">\n番茄\n计时</text>
+</navigator>
+
 <text class="choose1"  animation="{{ani2}}">\n创建\n习惯</text>
 <text class="choose1"  animation="{{ani3}}">\n我的\n习惯</text>
 <text class="time">{{time}}</text>
