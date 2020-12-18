@@ -1,0 +1,14 @@
+<!--pages/US/US.wxml-->
+<text class="lianxi">联系我们</text>
+<text class="backgrond"></text>
+<image class="usr" src="../../images/US_usr.png"></image>
+<text class="deve">Developers：</text>
+<text class="us">Damien、Xi、Ming、ll</text>
+<text class="thanks">感谢您的使用！</text>
+<text class="QQ">1009475425</text>
+<image class="QQimg" src="../../images/8_qq.png"></image>
+<text class="WX">ll2659702668</text>
+<image class="WXimg" src="../../images/8_wechat.png"></image>
+
+
+
