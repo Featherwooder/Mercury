@@ -1,10 +1,21 @@
 <!--pages/userBook/userBook.wxml-->
-<text>pages/userBook/userBook.wxml</text>
 
 <view>
-  <navigator url="../test/test" open-type="navigate">
-    <text class="user-text" id="help-text">使用手册</text>
-    <image class="user-image" id="help-image" src="../../images/3_help.png"></image>
-    <image class="image-pointer" id="help-pointer" src="../../images/3_pointer.png"></image>
-  </navigator>
-</view> 
+  <text class='user_book'> 使用手册 </text>
+</view>
+
+<view class='list_box' wx:for='{{list}}' wx:key='this' wx:for-item='parentItem' wx:for-index='parentIndex' >
+    <view class='list'>
+        <view class='list_name_box' catchtap='listTap' data-parentindex='{{parentIndex}}'>
+            <text class='list_item_name'>{{parentItem.listName}}</text>
+            <image src='../../images/3_pointer.png' class='icon_down {{parentItem.show&&"icon_down_rotate"}}'></image>
+        </view>
+        <view class='list_item_box' wx:if='{{parentItem.show}}'>
+            <view class='list_item' wx:for='{{parentItem.item}}' wx:key='this' catchtap='listItemTap' data-index='{{index}}'  data-parentindex='{{parentIndex}}'>
+                <view class='list_item_name_box'>
+                    <text class='list_item_name'>{{item.content}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+  </view>

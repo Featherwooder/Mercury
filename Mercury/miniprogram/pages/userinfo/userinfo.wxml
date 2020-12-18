@@ -11,7 +11,7 @@
   <image class="head-image" src="{{avatarUrl}}" bindtap="user_image_preview"></image>
 </view>
 <view>
-  <navigator url="../test/test" open-type="navigate">
+  <navigator url="../userBook/userBook" open-type="navigate">
     <text class="user-text" id="help-text">使用手册</text>
     <image class="user-image" id="help-image" src="../../images/3_help.png"></image>
     <image class="image-pointer" id="help-pointer" src="../../images/3_pointer.png"></image>
