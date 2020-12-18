@@ -4,10 +4,6 @@ Page({
   /**
    * 页面的初始数据
    */
-<<<<<<< HEAD
-=======
-
->>>>>>> 4009039c4b7327761d799b35690f8040c42af260
   data: {
     habit:{
       id: 0,
@@ -17,11 +13,7 @@ Page({
       checktimes: [],
       week: {}
     },
-<<<<<<< HEAD
-
-=======
  
->>>>>>> 4009039c4b7327761d799b35690f8040c42af260
     selected: {
       "monday": false,
       "tuesday": false,
@@ -198,11 +190,7 @@ Page({
       }
       else{
         wx.showToast({
-<<<<<<< HEAD
-          title: '习惯信息不全！',
-=======
           title: '您的习惯还没定制好哦!',
->>>>>>> 4009039c4b7327761d799b35690f8040c42af260
           icon: 'none',
           duration: 1500,
         })
@@ -212,19 +200,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-<<<<<<< HEAD
-    let habits = wx.getStorageSync('habits')||[];
-    //console.log(habits.findIndex(v=>v.id===0))
-    console.log(habits)
-    var i;
-    for(i=0;habits.findIndex(v=>v.id===i)!==-1;i++);//判断是否已有id
-    this.data.habit.id=i;//找到不存在的id，就使本次创建的id为i值
-    const habit=this.data.habit
-    this.setData({
-      habit
-    })
-
-=======
     
     var id=options.chang_id
     let habits = wx.getStorageSync('habits')||[];
@@ -252,7 +227,6 @@ Page({
     //console.log(habits.findIndex(v=>v.id===0))
     //console.log(habits)
     
->>>>>>> 4009039c4b7327761d799b35690f8040c42af260
     //console.log(n)
     //console.log(this.data.habit_id)
   },
@@ -305,8 +279,5 @@ Page({
   onShareAppMessage: function () {
 
   }
-<<<<<<< HEAD
-=======
   
->>>>>>> 4009039c4b7327761d799b35690f8040c42af260
 })
