@@ -4,11 +4,11 @@
 <text class="choose1"  animation="{{ani3}}">\n我的\n习惯</text>
 <text class="time">{{time}}</text>
 <text class="box"></text>
-  <image  class="image1" src="../../images/2_today.png"></image>
-  <image  class="image2" src="../../images/2_user.png"></image>
+  <image  class="image1" src="/images/2_today.png"></image>
+  <image  class="image2" src="/images/2_user.png" bindtap="user_Info"></image>
 
 
-  <image  class="image3" src="../../images/IceCave.png"   bindtap="turnback"></image>
+  <image  class="image3" src="/images/1.jpg"   bindtap="turnback"></image>
   <text class="text1" animation="{{ani4}}"  bindtap="turn">{{soup}}</text>
 
   <image  class="image4" src="../../images/2_timeline.png"></image>
@@ -22,7 +22,7 @@
 <text class="circlu" bindtap="go" hidden="{{hidden2}}"></text>
 <image  class="image6"  bindtap="go"src="../../images/2_calendar.png" hidden="{{hidden2}}"></image>
 <text class="circlu1" bindtap="close" hidden="{{!hidden2}}"></text>
-<image  class="image6"  bindtap="close"src="../../images/关闭.png" hidden="{{!hidden2}}"></image>
+<image  class="image6"  bindtap="close"src="../../images/close.png" hidden="{{!hidden2}}"></image>
 
 
 
