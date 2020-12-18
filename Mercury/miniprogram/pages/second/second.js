@@ -15,7 +15,7 @@ Page({
     hidden2:false,    
     hidden3:true,
     hidden4:false,
-    soup:"\n每个不曾起舞的日子，都是对生命的辜负！！"
+    soup:"\n我从来不相信什么懒洋洋的自由，我向往的自由是通过勤奋和努力实现的更广阔的人生，那样的自由才是珍贵的、有价值的。"
 
   },
   turn: function() {
