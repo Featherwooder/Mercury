@@ -6,9 +6,6 @@
   box-sizing: border-box;
 } 
 
-button {
-  background: initial;
-}
 
 button:focus{
   outline: 0;

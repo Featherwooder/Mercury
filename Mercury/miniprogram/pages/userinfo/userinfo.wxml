@@ -18,7 +18,7 @@
   </navigator>
 </view> 
 <view>
-  <navigator url="../test/test" open-type="navigate">
+  <navigator url="../suggestion/suggestion" open-type="navigate">
     <image class="user-image" id="pen-image" src="../../images/3_pen.png"></image>
     <text class="user-text" id="pen-text">意见反馈</text>
     <image class="image-pointer" id="pen-pointer" src="../../images/3_pointer.png"></image>
