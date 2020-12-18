@@ -75,9 +75,9 @@ Page({
 
 
    
-    animation1.translate(0, 0).rotate(360).scale(0.1,0.1).step()
-    animation2.translate(0, 0).rotate(360).scale(0.1,0.1).step()
-    animation3.translate(0, 0).rotate(360).scale(0.1,0.1).step()
+    animation1.translate(0, 0).rotate(360).scale(0,0).opacity(0).step()
+    animation2.translate(0, 0).rotate(360).scale(0,0).opacity(0).step()
+    animation3.translate(0, 0).rotate(360).scale(0,0).opacity(0).step()
 
   
     // 3.导出动画
@@ -108,9 +108,9 @@ Page({
 
 
    
-    animation1.translate(0, -90).rotate3d(360).scale(1,1).step()
-    animation2.translate(-90, 0).rotate3d(360).scale(1,1).step()
-    animation3.translate(-63, -63).rotate3d(360).scale(1,1).step()
+    animation1.translate3d(0, -90).rotate3d(360).scale(1,1).opacity(100).step()
+    animation2.translate3d(-90, 0).rotate3d(360).scale(1,1).opacity(100).step()
+    animation3.translate3d(-63, -63).rotate3d(360).scale(1,1).opacity(100).step()
 
   
     // 3.导出动画
@@ -120,6 +120,11 @@ Page({
       ani1:animation1.export(),
       ani2:animation2.export(),
       ani3:animation3.export()
+    })
+  },
+  myhabit(){
+    wx-wx.navigateTo({
+      url:"../../pages/calender/calender"
     })
   },
   /**
