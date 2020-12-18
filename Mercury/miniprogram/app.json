@@ -10,7 +10,6 @@
     "pages/second/second",
     "pages/userinfo/userinfo",
     "pages/index/index",
-    "pages/Bokk/Bokk",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
