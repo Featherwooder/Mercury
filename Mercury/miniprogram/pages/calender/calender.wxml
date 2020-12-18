@@ -1,0 +1,35 @@
+<!--pages/calender/calender.wxml-->
+
+<view
+class="habit"
+wx:for="{{habits}}"
+wx:for-item="item"
+wx:key="id">
+
+<van-swipe-cell right-width="{{ 65 }}">
+
+
+  
+  <van-cell-group>
+    <navigator url="../../pages/calender1/calender1" open-type="navigate">
+    <view class="habit_main" bind:tap="onDisplay"  >
+    <!--图片-->
+  
+    <image class="habit_img" src="{{item.img}}"></image>
+  
+  <!--标题-->
+    <text class="habit_title">{{item.title}}</text>
+    <text class="habit_remark">  {{item.remark}}</text>
+</view>  
+</navigator>
+  </van-cell-group>
+
+  <view class="checkin" slot="right" id="{{item.id}}" bindtap="chang_habit">
+    <text class="anniu"> 编辑</text>
+  </view>
+</van-swipe-cell>
+
+</view>
+
+<text class="topp"></text>
+<view class="myhabit"> 我的习惯</view>

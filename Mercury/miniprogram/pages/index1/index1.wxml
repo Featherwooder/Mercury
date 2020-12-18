@@ -5,13 +5,13 @@
 <view>
   <swiper class="index_swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" >
     <swiper-item>
-      <image src="/images/1.jpg"/>
+      <image src="https://pic.downk.cc/item/5fdb655a3ffa7d37b3bc8dd3.png"/>
     </swiper-item>
     <swiper-item>
-      <image src="/images/2.jpg"/>
+      <image src="https://pic.downk.cc/item/5fdb655a3ffa7d37b3bc8dd6.png"/>
     </swiper-item>
     <swiper-item>
-      <image src="/images/3.jpg"/>
+      <image src="https://pic.downk.cc/item/5fdb655a3ffa7d37b3bc8ddc.png"/>
     </swiper-item>
   </swiper>
 </view>

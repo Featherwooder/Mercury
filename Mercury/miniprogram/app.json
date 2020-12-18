@@ -2,11 +2,19 @@
   "pages": [
 
     "pages/index1/index1",
-    "pages/userinfo/userinfo",
+    "pages/userBook/userBook",
+    "pages/tomatotimer/tomatotimer",
+    "pages/BuildHabit/BuildHabit",
+    "pages/calender/calender",
+    "pages/suggestion/suggestion",    
     "pages/second/second",
+<<<<<<< HEAD
     "pages/suggestion/suggestion",
     "pages/BuildHabit/BuildHabit",
     "pages/test/test",
+=======
+    "pages/userinfo/userinfo",
+>>>>>>> 4009039c4b7327761d799b35690f8040c42af260
     "pages/index/index",
     "pages/Bokk/Bokk",
     "pages/userConsole/userConsole",
@@ -18,8 +26,14 @@
     "pages/openapi/openapi",
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
+<<<<<<< HEAD
     "pages/openapi/cloudid/cloudid"
     
+=======
+    "pages/openapi/cloudid/cloudid",
+    "pages/US/US"
+
+>>>>>>> 4009039c4b7327761d799b35690f8040c42af260
   ],
   "window": {
     "backgroundColor": "#0094ff",
