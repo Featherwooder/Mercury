@@ -1,59 +1,66 @@
-// miniprogram/pages/openapi/cloudid/cloudid.js
+// pages/openapi/cloudid/cloudid.js
 Page({
 
+  /**
+   * 页面的初始数据
+   */
   data: {
-    weRunResult: '',
-    userInfoResult: '',
+
   },
 
-  onGetWeRunData() {
-    wx.getWeRunData({
-      success: res => {
-        wx.cloud.callFunction({
-          name: 'echo',
-          data: {
-            // info 字段在云函数 event 对象中会被自动替换为相应的敏感数据
-            info: wx.cloud.CloudID(res.cloudID),
-          },
-        }).then(res => {
-          console.log('[onGetWeRunData] 收到 echo 回包：', res)
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
 
-          this.setData({
-            weRunResult: JSON.stringify(res.result),
-          })
-
-          wx.showToast({
-            title: '敏感数据获取成功',
-          })
-        }).catch(err => {
-          console.log('[onGetWeRunData] 失败：', err)
-        })
-      }
-    })
   },
 
-  onGetUserInfo(e) {
-    console.log(e)
-    wx.cloud.callFunction({
-      name: 'openapi',
-      data: {
-        action: 'getOpenData',
-        openData: {
-          list: [
-            e.detail.cloudID,
-          ]
-        }
-      }
-    }).then(res => {
-      console.log('[onGetUserInfo] 调用成功：', res)
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
 
-      this.setData({
-        userInfoResult: JSON.stringify(res.result),
-      })
+  },
 
-      wx.showToast({
-        title: '敏感数据获取成功',
-      })
-    })
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
 })

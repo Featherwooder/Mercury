@@ -1,0 +1,32 @@
+<view class="page_all">
+
+<view class="suggestion_head">意见反馈</view>
+    <view class="input_background">
+      <text class="input_head"> 请留下您宝贵的建议，畅所欲言！</text>
+      <view class="input_blank">      
+          <view class="input_border">
+            <textarea
+            class="input_"
+            name="suggestion"
+            bindinput="input_act"
+            maxlength="{{noteMaxLen}}" 
+            show-confirm-bar="{{true}}"
+            value="{{sug}}"
+            placeholder="在此输入..."
+            adjust-position="{{true}}"
+            >
+            </textarea>
+            <view class="number-limit">
+                <view class="tips">
+                  {{noteNowLen}}/{{noteMaxLen}}
+                </view>
+            </view>
+          </view>
+          <view class="butt_background">
+            <button class="submit_butt" size="mini" bindtap="Submit">提交</button>
+          </view>
+
+      </view>
+    </view>
+    
+</view>
