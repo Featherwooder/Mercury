@@ -21,8 +21,8 @@ image{
 
 .userinfo-avatar {
     position: relative;
-    
-    margin-left:187.5rpx;
+    width:90%;
+    margin-left:77.5rpx;
     top:100rpx;
     color: #fff;
     background-color: #0077ff;
