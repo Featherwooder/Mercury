@@ -15,7 +15,10 @@ Page({
     },
     title:"",
     remark:"",
+<<<<<<< HEAD
     value:"",
+=======
+>>>>>>> c401a80ca0d1b3c1f924841d67ab9c866c402846
     selected: {
       "monday": false,
       "tuesday": false,

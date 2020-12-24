@@ -43,13 +43,23 @@
       <view class="second_content">
         <text class="second_head">给习惯起个名字</text>
         <view class="name_background">
+<<<<<<< HEAD
           <input value="{{title}}" class="name_input" name="name_input" type="text" maxlength="4" bindinput="habit_name" placeholder="例如减肥、锻炼等（不超过四个字）" />
+=======
+          <input value="{{title}}" class="name_input" name="name_input" type="text" maxlength="4" bindinput="habit_name" placeholder="例如卷卷卷（不超过四个字）"
+          placeholder-class="input_class" />
+>>>>>>> c401a80ca0d1b3c1f924841d67ab9c866c402846
         </view>
       </view>
       <view class="third_content">
         <text class="third_head">写句话来激励自己</text>
         <view class="sentence_background">
+<<<<<<< HEAD
           <input value="{{remark}}" class="sentence_input" name="sentence_input" maxlength="10" type="text" bindinput="habit_sentence" placeholder="例如我一定要减肥变得美哒哒（不超过十个字）" />
+=======
+          <input value="{{remark}}" class="sentence_input" name="sentence_input" maxlength="10" type="text" bindinput="habit_sentence" placeholder="例如我要当卷怪！（不超过十个字）" 
+          placeholder-class="input_class"/>
+>>>>>>> c401a80ca0d1b3c1f924841d67ab9c866c402846
         </view>
       </view>
       <view class="fourth_content">

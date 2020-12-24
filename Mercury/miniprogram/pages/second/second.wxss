@@ -151,7 +151,7 @@ border-radius: 64rpx;
 
   .choose2{
     position: fixed;
-    left: 632rpx;
+    left: 629rpx;
     bottom: 44rpx;
     width: 110rpx;
     height: 110rpx;
@@ -166,8 +166,8 @@ border-radius: 64rpx;
   
   .choose3{
     position: fixed;
-    left: 630rpx;
-    bottom: 42rpx;
+    left: 629rpx;
+    bottom: 44rpx;
     width: 110rpx;
     height: 110rpx;
     line-height: 36rpx;
@@ -181,8 +181,8 @@ border-radius: 64rpx;
 
   .choose4{
     position: fixed;
-    left: 630rpx;
-    bottom: 42rpx;
+    left: 629rpx;
+    bottom: 44rpx;
     width: 110rpx;
     height: 110rpx;
     line-height: 36rpx;

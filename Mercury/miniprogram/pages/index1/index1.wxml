@@ -17,22 +17,22 @@
 </view>
 <view>
   <view wx:if="{{!avatarUrl}}">
+    <image class="check_in" src="../../images/1_login.png"></image>
   <button 
-    size="default"
-  
+    style="width:80vw;height:80rpx"
     class="userinfo-avatar"
     open-type="getUserInfo"
     bindgetuserinfo="onGetUserInfo"
-  >点击通过微信登录</button>
+  ></button>
   </view>
   <view wx:else>
+    <image class="check_in" src="../../images/1_clickin.png"></image>
   <button 
-    size="default"
-  
+  style="width:80vw;height:80rpx"
     class="userinfo-avatar"
     open-type="getUserInfo"
     bindgetuserinfo="onGetUserInfo"
-  >点击进入习惯星球</button>
+  ></button>
   </view>
 </view>
   
