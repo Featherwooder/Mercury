@@ -12,7 +12,8 @@ Page({
       remark: "",
       img: "",
       checktimes: [],
-      week: {}
+      week: {},
+      display:false
     },
  
     selected: {
@@ -92,6 +93,7 @@ Page({
     //console.log(e)
     var selectedList = e.detail.value;
     var date = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+  
     let selected = this.data.selected;//获取data里的值，好用来赋值
     for (var i = 0; i < date.length; i++) {
       if (selectedList.indexOf(date[i]) != -1) {

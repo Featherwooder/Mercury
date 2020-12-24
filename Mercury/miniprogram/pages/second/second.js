@@ -7,56 +7,55 @@ Page({
    * 页面的初始数据
    */
   data: {
+    habits:[
+      {
+        id: 0,
+      title: "",
+      remark: "",
+      img: "",
+      checktimes: [],
+      week: {},
+      display:false
+      },
+     
+    ],
+    animation1:null,
+    animation2:null,
     avatarUrl: '',
     userInfo: {},
     openid:'',
 
+    
     hidden1:true,
     hidden2:false,    
     hidden3:true,
     hidden4:false,
-    soup:"\n每个不曾起舞的日子，都是对生命的辜负！！"
+    have_habits:false,
+    soup:"\n每个不曾起舞的日子，都是对生命的辜负！！",
+    soup_back:"\n二十阿斯利康大家撒哈佛i啊回复第哦个划水都i！！"
 
   },
-  turn: function() {
-    
-    // 1.创建动画实例(animation)
-    var animation1 = wx.createAnimation({
-      duration: 500,//动画持续时间
-      timingFunction: 'ease-in-out',//动画以低速开始
-    })
-    var animation2 = wx.createAnimation({
-      duration: 1000,//动画持续时间
-      timingFunction: 'ease-in-out',//动画以低速开始
-    })
-    animation1.rotateX(-90).scale(0,0).step()
-    animation2.rotate3d(-360).scale(1,1).step()
+  animation: wx.createAnimation({
+    duration: 800,
+    timingFunction:"ease-out"
+   }),
+  turn(e) {
 
-    // 3.导出画
+    let that = this
+    let id = e.currentTarget.dataset.id
+    // 点击正面
+    if(id == 1) {
     this.setData({
-      hidden4:false,
-      ani4:animation1.export(),
-      ani5:animation2.export(),
+    animation1: that.animation.rotateY(180).step().export(),
+    animation2: that.animation.rotateY(0).step().export()
     })
-  },
-  turnback: function() {
-    // 1.创建动画实例(animation)
-    var animation1 = wx.createAnimation({
-      duration: 800,//动画持续时间
-      timingFunction: 'ease-in-out',//动画以低速开始
-    })
-    var animation2 = wx.createAnimation({
-      duration: 800,//动画持续时间
-      timingFunction: 'ease-in-out',//动画以低速开始
-    })
-    animation1.rotate3d(180).scale(1,1).step()
-    animation2.rotate3d(180).scale(0,0).step()
-    // 3.导出画
+    } else { //点击反面
     this.setData({
-      ani4:animation1.export(),
-      ani5:animation2.export(),
+      animation1: that.animation.rotateY(0).step().export(),
+      animation2: that.animation.rotateY(180).step().export()
     })
-  },
+    }
+   },
   close: function() {
     
     // 1.创建动画实例(animation)
@@ -131,7 +130,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const habits=wx.getStorageSync('habits')||[]
+    console.log(habits)
+    this.setData({
+      habits
+    })           
+    //获取habits
     var time = util.formatTime(new Date());
     // 再通过setData更改Page()里面的data，动态更新页面的数据
     this.setData({
@@ -157,7 +161,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var display_num=0;
+    
+    var j=0;
+    for(j = 0,len=habits.length; j < len; j++) {
+    for(var i=0;i<7;i++)
+      habits.week[i]
+    }
   },
 
   /**

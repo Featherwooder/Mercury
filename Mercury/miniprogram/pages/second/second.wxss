@@ -193,3 +193,12 @@ border-radius: 64rpx;
     font-size: 28rpx;
     letter-spacing:7rpx;
   }
+  .card{
+    backface-visibility: hidden;
+  }
+  .card2{
+     /* background: yellow; */
+ /* 默认显示正面 */
+ transform: rotateY(-180deg); 
+
+  }

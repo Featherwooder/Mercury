@@ -14,7 +14,8 @@ Page({
       remark: "",
       img: "",
       checktimes: [],
-      week: {}
+      week: {},
+      display:false
       },
      
     ],

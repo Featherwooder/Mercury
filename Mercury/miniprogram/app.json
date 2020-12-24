@@ -1,6 +1,7 @@
 {
   "pages": [
 
+    "pages/second/second",
     "pages/index1/index1",
     "pages/userBook/userBook",
     "pages/tomatotimer/tomatotimer",
@@ -8,7 +9,6 @@
     "pages/calender/calender",
     "pages/suggestion/suggestion",    
     "pages/temp/temp",
-    "pages/second/second",
     "pages/userinfo/userinfo",
     "pages/test/test",
     "pages/index/index",
