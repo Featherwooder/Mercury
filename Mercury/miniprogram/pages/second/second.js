@@ -7,8 +7,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    have_habits:false,
-    habits_num:0,
     habits:[
       {
         id: 0,
@@ -17,7 +15,6 @@ Page({
       img: "",
       checktimes: [],
       week: {},
-      checked:false,
       display:false
       },
      
@@ -162,65 +159,25 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var date = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    var display_num=0;
+    
     var j=0;
-    var len=0;
-    let habits = this.data.habits;
-    for(j = 0, len=habits.length; j < len; j++) {
-      var i=0
-      var today=8
-      today=util.getWeekByDate(new Date())-1
-     if(habits[j].week[date[today]]==true)
-      {
-        habits[j].display=true
-        if(habits[j].checked=false)
-        {this.data.habits_num++}
-      }
-      else{
-        habits[j].display=false
-      }
-      if(habits[j].checktimes[habits[j].checktimes.length-1]==this.data.time){
-        habits[j].checked=true
-      }
-      else {        habits[j].checked=false
-      }
-      console.log(this.data.habits_num)
+    for(j = 0,len=habits.length; j < len; j++) {
+    for(var i=0;i<7;i++)
+      habits.week[i]
     }
-    var habits_num=this.data.habits_num
-    if(this.data.habits_num>0){this.data.have_habits=true}
-    var have_habits=this.data.have_habits
-    this.setData({
-      habits:habits,
-      habits_num:habits_num,
-      have_habits:have_habits
-    });
   },
-  
-  onOpen(event) {
-    console.log(event)
-    const { position, name } = event.detail;
-    wx.showToast({
-      title: '打卡成功',
-      icon: 'success',
-      duration: 1500,
-    })
-    const habits=this.data.habits
-   
-    const checktimes=habits[event.currentTarget.id].checktimes
-    habits[event.currentTarget.id].display=false
-    habits[event.currentTarget.id].checktimes.push(this.data.time)
-    this.data.habits_num--
-    var habits_num=this.data.habits_num
-    if(this.data.habits_num==0){this.data.have_habits=false}
-    var have_habits=this.data.have_habits
-    console.log(checktimes[checktimes.length-1])
-    wx.setStorageSync('habits',habits)
-    this.setData({
-      habits,
-      habits_num:habits_num,
-      have_habits:have_habits
-    });
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
   },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
   onUnload: function () {
 
   },
