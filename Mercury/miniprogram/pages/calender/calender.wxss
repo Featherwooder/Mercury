@@ -86,53 +86,16 @@ color: #ffffff;
   position: relative;
 top: 38rpx;
 }
-
-/*.tips{
-  position:absolute;
-  left: 50rpx;
-top: 172rpx;
-width: 648rpx;
-height: 120rpx;
-line-height: 40rpx;
-border-radius: 40rpx;
-background-color: rgba(0, 119, 255, 100);
-color: rgba(16, 16, 16, 100);
-font-size: 28rpx;
-text-align: center;
-font-family: Arial;
-border: 1px solid rgba(187, 187, 187, 100);
+.delete{
+  position: relative;
+  top:-120rpx;
+  left:140rpx;
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 40rpx;
+  font-size: 44rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  color: #ffffff;
+    background-color: #0077ff;
 }
-.title{
-  position:absolute;
-  left: 178rpx;
-top: 198rpx;
-width: 194rpx;
-height: 68rpx;
-color: rgba(248, 248, 248, 100);
-font-size: 48rpx;
-text-align: left;
-font-family: PingFangSC-regular;
-}
-.img{
-  position:absolute;
-  left: 68rpx;
-top: 186rpx;
-width: 92rpx;
-height: 92rpx;
-border-radius: 60rpx;
-}
-
-.text1{
-  position:absolute;
-  left: 394rpx;
-top: 220rpx;
-width: 260rpx;
-height: 46rpx;
-color: rgba(216, 216, 216, 100);
-font-size: 26rpx;
-text-align: left;
-font-family: PingFangSC-regular;
-}*/
-
-
- 

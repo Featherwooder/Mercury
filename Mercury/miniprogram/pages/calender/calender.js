@@ -35,13 +35,27 @@ Page({
      url: '../BuildHabit/BuildHabit?chang_id='+e.currentTarget.id
     })
   },
-  onLoad: function (options) {
-    const habits=wx.getStorageSync('habits')||[]
-    console.log(habits)
+  delete_habit(e){
+    //console.log(e)
+    var habits=this.data.habits
+    var id=parseInt(e.currentTarget.id)
+    let index=habits.findIndex(v=>v.id===id)
+   // console.log(index)
+    if(index!==-1){//如果存在则删除
+      habits.splice(index,1)
+    }
     this.setData({
       habits
-    })           
+    })
+    wx.setStorageSync("habits", habits);
+  },
 
+  onLoad: function (options) {
+    const habits=wx.getStorageSync('habits')||[]
+    //console.log(habits)
+    this.setData({
+      habits
+    })
     
   },
 

@@ -6,7 +6,7 @@ wx:for="{{habits}}"
 wx:for-item="item"
 wx:key="id">
 
-<van-swipe-cell right-width="{{ 65 }}">
+<van-swipe-cell right-width="{{ 130 }}">
 
 
   
@@ -26,6 +26,9 @@ wx:key="id">
 
   <view class="checkin" slot="right" id="{{item.id}}" bindtap="chang_habit">
     <text class="anniu"> 编辑</text>
+  </view>
+  <view class="delete" slot="right" id="{{item.id}}" bindtap="delete_habit">
+    <text class="anniu"> 删除</text>
   </view>
 </van-swipe-cell>
 
