@@ -10,7 +10,6 @@ Page({
     avatarUrl: '',
     userInfo: {},
     openid:'',
-
     hidden1:true,
     hidden2:false,    
     hidden3:true,

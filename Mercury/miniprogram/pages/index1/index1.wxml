@@ -28,7 +28,6 @@
   <view wx:else>
   <button 
     size="default"
-  
     class="userinfo-avatar"
     open-type="getUserInfo"
     bindgetuserinfo="onGetUserInfo"
