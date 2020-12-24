@@ -6,23 +6,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-    selected: [
+    id:-1,
+    times:[],
+    habits:[
       {
-        date: '2020-12-21'
-      }, {
-        date: '2020-12-02'
-      },{
-        date: '2018-5-24'
-      },{
-        date: '2018-5-25'
-      }
-    ]
+        id: 0,
+      title: "",
+      remark: "",
+      img: "",
+      checktimes: [],
+      week: {},
+      checked:false,
+      display:false
+      },
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) { },
+  onLoad: function (options) {
+    var id= parseInt(options.chang_id)
+    console.log(options)
+    var habits = wx.getStorageSync("habits") || [];
+    var times=[]
+    console.log(habits[id].checktimes)
+    times=times.concat(habits[id].checktimes)
+    this.setData({
+      id:id,
+      habits,
+      times:times
+    })
+   },
   /**
   * 日历是否被打开
   */

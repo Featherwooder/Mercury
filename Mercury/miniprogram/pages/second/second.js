@@ -7,6 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    have_habits:false,
+    habits_num:0,
     habits:[
       {
         id: 0,
@@ -15,6 +17,7 @@ Page({
       img: "",
       checktimes: [],
       week: {},
+      checked:false,
       display:false
       },
      
@@ -30,13 +33,7 @@ Page({
     hidden2:false,    
     hidden3:true,
     hidden4:false,
-<<<<<<< HEAD
-    have_habits:false,
-    soup:"\n每个不曾起舞的日子，都是对生命的辜负！！",
-    soup_back:"\n二十阿斯利康大家撒哈佛i啊回复第哦个划水都i！！"
-=======
     soup:"\n我从来不相信什么懒洋洋的自由，我向往的自由是通过勤奋和努力实现的更广阔的人生，那样的自由才是珍贵的、有价值的。"
->>>>>>> c401a80ca0d1b3c1f924841d67ab9c866c402846
 
   },
   animation: wx.createAnimation({
@@ -165,25 +162,65 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var display_num=0;
-    
+    var date = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
     var j=0;
-    for(j = 0,len=habits.length; j < len; j++) {
-    for(var i=0;i<7;i++)
-      habits.week[i]
+    var len=0;
+    let habits = this.data.habits;
+    for(j = 0, len=habits.length; j < len; j++) {
+      var i=0
+      var today=8
+      today=util.getWeekByDate(new Date())-1
+     if(habits[j].week[date[today]]==true)
+      {
+        habits[j].display=true
+        if(habits[j].checked=false)
+        {this.data.habits_num++}
+      }
+      else{
+        habits[j].display=false
+      }
+      if(habits[j].checktimes[habits[j].checktimes.length-1]==this.data.time){
+        habits[j].checked=true
+      }
+      else {        habits[j].checked=false
+      }
+      console.log(this.data.habits_num)
     }
+    var habits_num=this.data.habits_num
+    if(this.data.habits_num>0){this.data.have_habits=true}
+    var have_habits=this.data.have_habits
+    this.setData({
+      habits:habits,
+      habits_num:habits_num,
+      have_habits:have_habits
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  
+  onOpen(event) {
+    console.log(event)
+    const { position, name } = event.detail;
+    wx.showToast({
+      title: '打卡成功',
+      icon: 'success',
+      duration: 1500,
+    })
+    const habits=this.data.habits
+   
+    const checktimes=habits[event.currentTarget.id].checktimes
+    habits[event.currentTarget.id].display=false
+    habits[event.currentTarget.id].checktimes.push(this.data.time)
+    this.data.habits_num--
+    var habits_num=this.data.habits_num
+    if(this.data.habits_num==0){this.data.have_habits=false}
+    var have_habits=this.data.have_habits
+    console.log(checktimes[checktimes.length-1])
+    wx.setStorageSync('habits',habits)
+    this.setData({
+      habits,
+      habits_num:habits_num,
+      have_habits:have_habits
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload: function () {
 
   },

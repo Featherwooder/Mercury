@@ -12,7 +12,8 @@ Page({
       img: "",
       checktimes: [],
       week: {},
-      display:false
+      display:false,
+      checked:false
     },
     title:"",
     remark:"",

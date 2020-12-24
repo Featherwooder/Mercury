@@ -11,7 +11,7 @@ wx:key="id">
 
   
   <van-cell-group>
-    <navigator url="../../pages/calender1/calender1" open-type="navigate">
+    <view id ="{{item.id}}" bindtap="calendar">
     <view class="habit_main" bind:tap="onDisplay"  >
     <!--图片-->
   
@@ -21,7 +21,7 @@ wx:key="id">
     <text class="habit_title">{{item.title}}</text>
     <text class="habit_remark">  {{item.remark}}</text>
 </view>  
-</navigator>
+</view>
   </van-cell-group>
 
   <view  slot="right" id="{{item.id}}" >

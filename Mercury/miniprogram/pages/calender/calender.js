@@ -15,6 +15,7 @@ Page({
       img: "",
       checktimes: [],
       week: {},
+      checked:false,
       display:false
       },
      
@@ -34,6 +35,14 @@ Page({
     //console.log(e)
     wx.navigateTo({
      url: '../BuildHabit/BuildHabit?chang_id='+e.currentTarget.id
+    })
+  },
+  calendar(e){
+    //console.log(e)
+    console.log(e)
+
+    wx.navigateTo({
+     url: '../calender1/calender1?chang_id='+e.currentTarget.id
     })
   },
   onLoad: function (options) {

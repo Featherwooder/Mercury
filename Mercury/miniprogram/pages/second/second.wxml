@@ -21,14 +21,42 @@
 </view>
 
 <image  class="image4" src="../../images/2_timeline.png"></image>
-<image  class="image5" src="../../images/2_exclam.png"></image>
 
 
-<view hidden="{{no_habits}}">
+
+<view hidden="{{have_habits}}">
+  <image  class="image5" src="../../images/2_exclam.png"></image>
 <text class="finish">你今天的习惯已经全部完成啦！
 如果需要创建新的习惯
 请点击右下方的习惯按钮编辑创建</text>
 </view>
+
+<view
+class="habit"
+wx:for="{{habits}}"
+wx:for-item="item"
+wx:key="id">
+
+<view wx:if="{{item.display}}">
+  <view wx:if="{{item.checked==false}}">
+  <van-swipe-cell id="{{item.id}}" right-width="{{ 150 }}"  bind:open="onOpen">
+<van-cell-group>
+  <view class="habit_main"  >
+    <!--图片-->
+    <image class="habit_img" src="{{item.img}}"></image>
+  <!--标题-->
+    <text class="habit_title">{{item.title}}</text>
+    <text class="habits_finish">完成</text>
+    <image class="pointer1" src="../../images/3_bluepointer.png"></image>
+    <image class="pointer2" src="../../images/3_bluepointer.png"></image>
+    </view>
+  </van-cell-group>
+  <view class="check" slot="right" bindtap="check">确认打卡</view>
+</van-swipe-cell>
+</view>
+</view>
+</view>
+
 
 <view >
 <navigator url="../../pages/tomatotimer/tomatotimer" >
@@ -55,9 +83,6 @@
 <image  class="image6"  bindtap="go"src="../../images/2_calendar.png" hidden="{{hidden2}}"></image>
 <text class="circlu1" bindtap="close" hidden="{{!hidden2}}"></text>
 <image  class="image6"  bindtap="close"src="../../images/2_calendar.png" hidden="{{!hidden2}}"></image>
-
-
-
 
 
 
