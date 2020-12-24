@@ -12,6 +12,7 @@ App({
         // env: 'my-env-id',
         traceUser: true,
       })
+      
     }
 //375 * 667 
 //208 *69
@@ -20,5 +21,5 @@ App({
       userInfo: {},
       avatarUrl:""
     }
-  }
+  },
 })

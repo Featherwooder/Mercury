@@ -1,5 +1,4 @@
 <!--pages/second/second.wxml-->
-
 <text class="time">{{time}}</text>
 <text class="box"></text>
 <image  class="image1" src="/images/2_today.png"></image>
