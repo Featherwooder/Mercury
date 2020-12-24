@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+
+  <view wx:if="{{canIUse}}">
+    <view class="header">
+    <image src="user-unlogin.png" ></image>
+    </view>
+
+    <button class="bottom" type="primary" open-type="getUserInfo" lang="zh_CN" ongetuserinfo="onGetUserInfo">
+      授权登陆
+    </button>
+  </view>
+
+</view>

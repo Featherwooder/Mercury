@@ -1,0 +1,71 @@
+<view class="container">
+  <view class="build_habit_head">新建习惯</view>
+  <view class="build_habit">
+    <form bindsubmit="formSubmit">
+      <view class="submit_butt">
+        <button class="submit_butt" size="mini" form-type="submit" id="save">保存</button>
+      </view>
+      <view class="first_content">
+        <text class="first_head">在一周中什么时候：</text>
+        <view class="selectDay">
+          <checkbox-group bindchange="check_box_Change" name="check_box">
+            <label id="monday" class="checkbox{{selected.monday?'selectedColor':''}}" for="monday">
+              周一
+              <checkbox value="monday" id='monday' hidden checked="{{selected.monday}}" />
+            </label>
+            <label id="tuesday" class="checkbox{{selected.tuesday?'selectedColor':''}}" for="tuesday">
+              周二
+              <checkbox value="tuesday" id='tuesday' hidden checked="{{selected.tuesday}}" />
+            </label>
+            <label id="wednesday" class="checkbox{{selected.wednesday?'selectedColor':''}}" for="wednesday">
+              周三
+              <checkbox value="wednesday" id='wednesday' hidden checked="{{selected.wednesday}}" />
+            </label>
+            <label id="thursday" class="checkbox{{selected.thursday?'selectedColor':''}}" for="thursday">
+              周四
+              <checkbox value="thursday" id='thursday' hidden checked="{{selected.thursday}}" />
+            </label>
+            <label id="friday" class="checkbox{{selected.friday?'selectedColor':''}}" for="friday">
+              周五
+              <checkbox value="friday" id='friday' hidden checked="{{selected.friday}}" />
+            </label>
+            <label id="saturday" class="checkbox{{selected.saturday?'selectedColor':''}}" for="saturday">
+              周六
+              <checkbox value="saturday" id='saturday' hidden checked="{{selected.saturday}}" />
+            </label>
+            <label id="sunday" class="checkbox{{selected.sunday?'selectedColor':''}}" for="sunday">
+              周日
+              <checkbox value="sunday" id='sunday' hidden checked="{{selected.sunday}}" />
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class="second_content">
+        <text class="second_head">给习惯起个名字</text>
+        <view class="name_background">
+          <input value="{{title}}" class="name_input" name="name_input" type="text" maxlength="4" bindinput="habit_name" placeholder="例如卷卷卷（不超过四个字）"
+          placeholder-class="input_class" />
+        </view>
+      </view>
+      <view class="third_content">
+        <text class="third_head">写句话来激励自己</text>
+        <view class="sentence_background">
+          <input value="{{remark}}" class="sentence_input" name="sentence_input" maxlength="10" type="text" bindinput="habit_sentence" placeholder="例如我要当卷怪！（不超过十个字）" 
+          placeholder-class="input_class"/>
+        </view>
+      </view>
+      <view class="fourth_content">
+        <text class="fourth_head">选择一个图标：</text>
+        <view class="habit_image">
+          <radio-group bindchange="checkboxChange" name="check_box_image">
+            <label wx:for="{{imageList}}" wx:for-index="index" wx:for-item="item"
+              class="image_label" for="{{item.value}}">
+              <image class="selected-{{item.selected?'image':''}}" src="{{item.src}}" mode="aspectFit" lazy-load="false" />
+              <radio   value="{{item.value}}" id='{{item.value}}' hidden />
+            </label>
+          </radio-group>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

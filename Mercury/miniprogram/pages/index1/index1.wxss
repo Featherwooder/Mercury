@@ -1,0 +1,38 @@
+page{
+    background-color: #ffffff;
+}
+.index_image1{
+   margin-left: 34rpx;
+   margin-top: 72rpx;
+  
+    width: 416rpx;
+    height: 138rpx;
+}
+.index_swiper{
+    height: 716rpx;
+    width: 678rpx;
+    margin-left: 36rpx;
+    margin-right: 36rpx;
+}
+image{
+    width: 678rpx;
+    height: 716rpx;
+}
+
+.userinfo-avatar {
+    position: relative;
+    margin-left:77.5rpx;
+    top:10rpx;
+    color: #fff;
+    background-color: #0077ff;
+    justify-content: center;
+    opacity: 0;
+}
+
+.check_in{
+    position: relative;
+    margin-left:77.5rpx;
+    top:100rpx;
+    width: 600rpx;
+    height: 60rpx;
+}
