@@ -15,6 +15,7 @@ Page({
     },
     title:"",
     remark:"",
+    value:"",
     selected: {
       "monday": false,
       "tuesday": false,
@@ -216,10 +217,12 @@ Page({
       //console.log(habits.findIndex(v=>v.id===id))
       if(habits.findIndex(v=>v.id===id)!==-1){//如果存在
         const habit=habits[id]//获得habit信息
+        
 
         var img_num=this.data.imageList.findIndex(v=>v.src===habit.img)//获取habit单选的选项
         const imageList=this.data.imageList
         imageList[img_num].selected=true
+        var value=
         this.setData({
           imageList,
           habit,
