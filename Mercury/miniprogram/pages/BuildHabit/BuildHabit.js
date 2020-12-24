@@ -15,6 +15,7 @@ Page({
     },
     title:"",
     remark:"",
+    value:"",
     selected: {
       "monday": false,
       "tuesday": false,
@@ -155,6 +156,10 @@ Page({
     console.log(e)
     var habits = wx.getStorageSync("habits") || [];
     //console.log(e.detail.value.check_box.length)
+    console.log(e.detail.value.check_box_image.length)
+    console.log(e.detail.value.check_box.length)
+    console.log(e.detail.value.name_input.length)
+    console.log(e.detail.value.sentence_input.length)
     if(e.detail.value.check_box_image.length&&e.detail.value.check_box.length&&
       e.detail.value.name_input.length&&e.detail.value.sentence_input.length){
         wx.showModal({

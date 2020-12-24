@@ -59,7 +59,7 @@
             <label wx:for="{{imageList}}" wx:for-index="index" wx:for-item="item"
               class="image_label" for="{{item.value}}">
               <image class="selected-{{item.selected?'image':''}}" src="{{item.src}}" mode="aspectFit" lazy-load="false" />
-              <radio   value="{{item.value}}" id='{{item.value}}' hidden />
+              <radio   value="item.selected?'{{item.value}}': " id='{{item.value}}' hidden />
             </label>
           </radio-group>
         </view>
