@@ -76,9 +76,11 @@
   padding-left: 10rpx;
   padding-right: 10rpx;
   border: 1px solid #ffffff;
-  background: rgb(155, 207, 228);
+  background: #428dfc;
+  opacity: 0.75;
   border-radius: 8rpx;
   text-align: center;
+  color:#ffffff;
 }
 .checkbox,#monday{
  left: 0rpx;
@@ -113,8 +115,8 @@
   padding-right: 10rpx;
   border-radius: 8rpx;
   text-align: center;
-  background: rgb(34, 166, 218);
-  border: 1px solid #000000;
+  background: #0077ff;
+  color:#ffffff;
 }
 .checkboxselectedColor,#monday{
   left: 0rpx;
@@ -149,14 +151,18 @@
 .name_background{
   width: 678rpx;
   height: 70rpx;
-
   background: rgb(238, 238, 238);
   border-radius: 20rpx;
 }
 .name_input{
   position: relative;
-  top: 10rpx;
-  left: 10rpx;
+  margin-top: 20rpx;
+  
+  left: 15rpx;
+}
+.input_class{
+  font-size:30rpx;
+
 }
 .sentence_background{
   width: 678rpx;
@@ -167,7 +173,7 @@
 }
 .sentence_input{
   position: relative;
-  top: 10rpx;
+  margin-top: 20rpx;
   left: 10rpx;
 }
 

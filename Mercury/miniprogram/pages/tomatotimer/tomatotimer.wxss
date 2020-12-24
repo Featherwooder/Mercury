@@ -55,7 +55,7 @@ page{
 .start-count{
   position: absolute;
   left: 225rpx;
-  top: 298rpx;
+  top: 190rpx;
   width: 300rpx;
   height: 80rpx;
 }

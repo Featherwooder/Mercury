@@ -21,10 +21,18 @@ image{
 
 .userinfo-avatar {
     position: relative;
-    width:90%;
     margin-left:77.5rpx;
-    top:100rpx;
+    top:10rpx;
     color: #fff;
     background-color: #0077ff;
     justify-content: center;
+    opacity: 0;
+}
+
+.check_in{
+    position: relative;
+    margin-left:77.5rpx;
+    top:100rpx;
+    width: 600rpx;
+    height: 60rpx;
 }
