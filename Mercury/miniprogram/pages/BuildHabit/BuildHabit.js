@@ -4,7 +4,6 @@ Page({
   /**
    * 页面的初始数据
    */
-
   data: {
     habit:{
       id: 0,
@@ -15,7 +14,8 @@ Page({
       week: {},
       display:false
     },
- 
+    title:"",
+    remark:"",
     selected: {
       "monday": false,
       "tuesday": false,
@@ -163,6 +163,10 @@ Page({
           title:"确认保存",
           success: (result) => {
             if(result.confirm){//保存    
+              let index=habits.findIndex(v=>v.id===this.data.habit.id)
+              if(index!==-1){//如果存在则删除
+                habits.splice(index,1)
+              }
               habits.push(this.data.habit);
               console.log(habits)
               wx.setStorageSync("habits", habits);               
@@ -203,15 +207,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-    var id=options.chang_id
+    var id= parseInt(options.chang_id)
     let habits = wx.getStorageSync('habits')||[];
-    if(id){//id存在则修改
-      if(habits.findIndex(v=>v.id===i)!==-1){//如果存在
-        const habit=habits[id]
-        
+    if(id>=0){//id存在则修改
+      
+      //console.log(habits.findIndex(v=>v.id===id))
+      if(habits.findIndex(v=>v.id===id)!==-1){//如果存在
+        const habit=habits[id]//获得habit信息
+
+        var img_num=this.data.imageList.findIndex(v=>v.src===habit.img)//获取habit单选的选项
+        const imageList=this.data.imageList
+        imageList[img_num].selected=true
         this.setData({
+          imageList,
           habit,
+          title:habit.title,
+          remark:habit.remark,
           selected:habit.week
         })
       }

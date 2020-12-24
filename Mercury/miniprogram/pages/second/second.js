@@ -30,9 +30,13 @@ Page({
     hidden2:false,    
     hidden3:true,
     hidden4:false,
+<<<<<<< HEAD
     have_habits:false,
     soup:"\n每个不曾起舞的日子，都是对生命的辜负！！",
     soup_back:"\n二十阿斯利康大家撒哈佛i啊回复第哦个划水都i！！"
+=======
+    soup:"\n我从来不相信什么懒洋洋的自由，我向往的自由是通过勤奋和努力实现的更广阔的人生，那样的自由才是珍贵的、有价值的。"
+>>>>>>> c401a80ca0d1b3c1f924841d67ab9c866c402846
 
   },
   animation: wx.createAnimation({
