@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "van-circle": "../../comments/dist/circle/index",
-    "van-dialog": "../../comments/dist/dialog/index"
-  }
-}
