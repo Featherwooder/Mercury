@@ -1,5 +1,5 @@
 // pages/calender/calender.js
-
+const app = getApp()
 Page({
 
   /**
@@ -9,13 +9,13 @@ Page({
   data: {
     habits: [{
         id: 0,
-      title: "",
-      remark: "",
-      img: "",
-      checktimes: [],
-      week: {},
-      checked:false,
-      display:false
+        title: "",
+        remark: "",
+        img: "",
+        checktimes: [],
+        week: {},
+        checked: false,
+        display: false
       },
 
     ],
@@ -31,12 +31,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   change_habit(e) {
-    //console.log(e)
+    app.get_auth()
+    console.log(e)
     wx.navigateTo({
       url: '../BuildHabit/BuildHabit?chang_id=' + e.currentTarget.id
     })
   },
   delete_habit(e) {
+    app.get_auth()
     //console.log(e)
     var habits = this.data.habits
     var id = parseInt(e.currentTarget.id)
@@ -52,7 +54,7 @@ Page({
           this.setData({
             habits
           })
-          wx.setStorageSync("habits", habits);    
+          wx.setStorageSync("habits", habits);
           // 1.获取页面栈(返回一个数组,包含了所有曾经去过的页面)
           var pages = getCurrentPages(); //可以log看看是什么(里面什么都有--)
           console.log(pages)
@@ -73,12 +75,12 @@ Page({
       url: '../calender1/calender1?chang_id=' + e.currentTarget.id
     })
   },
-  calendar(e){
+  calendar(e) {
     //console.log(e)
     console.log(e)
 
     wx.navigateTo({
-     url: '../calender1/calender1?chang_id='+e.currentTarget.id
+      url: '../calender1/calender1?chang_id=' + e.currentTarget.id
     })
   },
   onLoad: function (options) {

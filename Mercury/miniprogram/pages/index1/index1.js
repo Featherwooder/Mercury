@@ -10,19 +10,20 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    avatarUrl:""
+    avatarUrl: ""
   },
-  globalData:{
+  globalData: {
 
 
   },
-  handlePreviewImage(){
-    wx-wx.previewImage({
-      urls:[this.data.avatarUrl] ,
+  handlePreviewImage() {
+    wx - wx.previewImage({
+      urls: [this.data.avatarUrl],
       current: 'current',
     })
   },
-  onLoad: function() {
+  onLoad: function () {
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -30,41 +31,56 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
-              app.globalData.avatarUrl= res.userInfo.avatarUrl,
-              app.globalData.userInfo= res.userInfo,
-              this.setData({
-                avatarUrl:res.userInfo.avatarUrl,
-                userInfo:res.userInfo
-              })
-             /* wx-wx.setStorage({
-                data: avatarUrl,
-                key: 'avatarUrl',
-                
-              })*/
+              app.globalData.avatarUrl = res.userInfo.avatarUrl,
+                app.globalData.userInfo = res.userInfo,
+                this.setData({
+                  avatarUrl: res.userInfo.avatarUrl,
+                  userInfo: res.userInfo
+                })
+
             }
-            
+
           })
         }
       }
     })
   },
 
-  onGetUserInfo: function(e) {
-    console.log(e)
+  onGetUserInfo: function (e) {
+    //console.log(e)
     if (!this.data.logged && e.detail.userInfo) {
-      app.globalData.avatarUrl= e.detail.userInfo.avatarUrl,
-      app.globalData.userInfo= e.detail.userInfo,
-      this.setData({
-        logged: true,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo,
-      })        
-      if(this.data.logged){
-        wx.redirectTo({
-          url: '/pages/second/second',
+      app.globalData.avatarUrl = e.detail.userInfo.avatarUrl,
+        app.globalData.userInfo = e.detail.userInfo,
+        this.setData({
+          logged: true,
+          avatarUrl: e.detail.userInfo.avatarUrl,
+          userInfo: e.detail.userInfo,
         })
-      }     
+
+
     }
+  },
+  requestSubscribe: function () {
+    let that = this
+    wx.requestSubscribeMessage({
+      tmplIds: ['G8PLO681GqSTI1EyEnRoU0Z2OqqUCQEnze-CfbNXhRg'],
+      success(res) {
+        console.log('消息', res)
+        if (that.data.logged) {
+          wx.redirectTo({
+            url: '/pages/second/second',
+          })
+        }
+      },
+      fail(res) {
+        console.log('失败', res)
+        if (that.data.logged) {
+          wx.redirectTo({
+            url: '/pages/second/second',
+          })
+        }
+      }
+    })
   },
 
   /**

@@ -88,6 +88,7 @@ Page({
   },
 
   opencalendar: function () {
+    app.get_auth()
     this.setData({ show: true });
     console.log(this.data)
   },
@@ -121,6 +122,7 @@ Page({
   },
 
   seterror: function () {
+    app.get_auth()
     console.log('error')
     wx.showToast({
       title: '专注中，不可修改',
@@ -176,6 +178,7 @@ Page({
     */
   },
   confirmcountdown: function () {
+    app.get_auth()
     this.setData({
       showdialog : false
     })
@@ -186,6 +189,7 @@ Page({
     })
   } ,
   stoptimer: function () {
+    app.get_auth()
     let that = this
     wx.showModal({
       content: '确定放弃本次专注吗？',

@@ -3,7 +3,7 @@
   <view class="build_habit">
     <form bindsubmit="formSubmit">
       <view class="submit_butt">
-        <button class="submit_butt" size="mini" form-type="submit" id="save">保存</button>
+        <button class="submit_butt" size="mini" form-type="submit" id="save" >保存</button>
       </view>
       <view class="first_content">
         <text class="first_head">在一周中什么时候：</text>

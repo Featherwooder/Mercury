@@ -41,7 +41,7 @@ Page({
     timingFunction:"ease-out"
    }),
   turn(e) {
-
+    app.get_auth()
     let that = this
     let id = e.currentTarget.dataset.id
     // 点击正面
@@ -58,7 +58,7 @@ Page({
     }
    },
   close: function() {
-    
+    app.get_auth()
     // 1.创建动画实例(animation)
     var animation1 = wx.createAnimation({
       duration: 200,//动画持续时间
@@ -91,7 +91,7 @@ Page({
   },
 
   go: function() {
-    
+    app.get_auth()
     // 1.创建动画实例(animation)
     var animation1 = wx.createAnimation({
       duration: 200,//动画持续时间
@@ -131,8 +131,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // wx.cloud.callFunction({
+    //   name:'SendMsg',
+    //   complete:res=>{
+    //       console.log('调用',res)
+    //   } 
+    // })
     const habits=wx.getStorageSync('habits')||[]
-    console.log(habits)
+    
     this.setData({
       habits
     })           
@@ -147,6 +153,7 @@ Page({
 
   },
   user_Info(){
+    app.get_auth()
     wx-wx.navigateTo({
       url: '/pages/userinfo/userinfo',
     })
@@ -188,7 +195,7 @@ Page({
       else {        habits[j].checked=false
 
       }
-      console.log(this.data.habits_num)
+ 
     }
     var habits_num=this.data.habits_num
     if(this.data.habits_num>0){this.data.have_habits=true}
@@ -199,7 +206,7 @@ Page({
       have_habits:have_habits
     });
   },
-  
+ 
   onOpen(event) {
     console.log(event)
     const { position, name } = event.detail;
