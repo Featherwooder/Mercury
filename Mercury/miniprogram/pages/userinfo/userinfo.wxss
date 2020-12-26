@@ -108,9 +108,9 @@ page {
 }
 .head-image{
   position: absolute;
-  left: 500.5rpx;
-  top: 130.5rpx;
-  width: 204rpx;
-  height: 204rpx;
+  left: 508rpx;
+  top: 138rpx;
+  width: 188rpx;
+  height: 188rpx;
   border-radius: 120px;
 }

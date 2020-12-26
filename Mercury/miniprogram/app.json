@@ -1,6 +1,6 @@
 {
   "pages": [
-
+    "pages/TomatoDairy/TomatoDairy",
     "pages/index1/index1",
     "pages/userBook/userBook",
     "pages/tomatotimer/tomatotimer",
