@@ -9,6 +9,7 @@ Page({
   data: {
     have_habits:false,
     habits_num:0,
+   // time:'',
     habits:[
       {
         id: 0,

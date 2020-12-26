@@ -1,71 +1,74 @@
-.build_habit_head{
+.build_habit_head {
   position: absolute;
   left: 36rpx;
-  top: 28rpx;
-  width: 100%;
-  height: 92rpx;
+  top: 38rpx;
+  width: 281rpx;
+  height: 117rpx;
   color: rgba(16, 16, 16, 100);
   font-size: 32px;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
-  }
-.build_habit{
+}
+
+.build_habit {
   position: absolute;
   width: 100%;
   height: 100%;
   text-align: left;
 }
-.first_content{
+
+.first_content {
   position: absolute;
   left: 36rpx;
   top: 200rpx;
+  width: 100%;
+  height: 92rpx;
+  color: rgba(16, 16, 16, 100);
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  width: 100%;
-  height: 92rpx;
-  
-  color: rgba(16, 16, 16, 100);
- 
-  text-align: left;
-  font-family:Arial, Helvetica, sans-serif;
-}
-.second_content{
+.second_content {
   position: absolute;
   left: 36rpx;
-  top:400rpx;
+  top: 400rpx;
   width: 100%;
   height: 92rpx;
   color: rgba(16, 16, 16, 100);
- 
   text-align: left;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.third_content{
+
+.third_content {
   position: absolute;
   left: 36rpx;
-  top:600rpx;
+  top: 600rpx;
   width: 100%;
   height: 92rpx;
   color: rgba(16, 16, 16, 100);
 
   text-align: left;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.fourth_content{
+
+.fourth_content {
   position: absolute;
   left: 36rpx;
-  top:800rpx;
+  top: 800rpx;
   width: 100%;
   height: 92rpx;
   color: rgba(16, 16, 16, 100);
   text-align: left;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.check_box_Chang{
+
+.check_box_Chang {
   position: absolute;
   width: 100%;
   left: 0rpx;
 }
-.checkbox{
+
+.checkbox {
   position: absolute;
   top: 60rpx;
   height: 40rpx;
@@ -80,30 +83,45 @@
   opacity: 0.75;
   border-radius: 8rpx;
   text-align: center;
-  color:#ffffff;
+  color: #ffffff;
 }
-.checkbox,#monday{
- left: 0rpx;
+
+.checkbox,
+#monday {
+  left: 0rpx;
 }
-.checkbox,#tuesday{
+
+.checkbox,
+#tuesday {
   left: 100rpx;
 }
-.checkbox,#wednesday{
+
+.checkbox,
+#wednesday {
   left: 200rpx;
 }
-.checkbox,#thursday{
+
+.checkbox,
+#thursday {
   left: 300rpx;
 }
-.checkbox,#friday{
+
+.checkbox,
+#friday {
   left: 400rpx;
 }
-.checkbox,#saturday{
+
+.checkbox,
+#saturday {
   left: 500rpx;
 }
-.checkbox,#sunday{
+
+.checkbox,
+#sunday {
   left: 600rpx;
 }
-.checkboxselectedColor{
+
+.checkboxselectedColor {
   position: absolute;
   top: 60rpx;
   height: 40rpx;
@@ -116,92 +134,108 @@
   border-radius: 8rpx;
   text-align: center;
   background: #0077ff;
-  color:#ffffff;
+  color: #ffffff;
 }
-.checkboxselectedColor,#monday{
-  left: 0rpx;
- }
- .checkboxselectedColor,#tuesday{
-   left: 100rpx;
- }
- .checkboxselectedColor,#wednesday{
-   left: 200rpx;
- }
- .checkboxselectedColor,#thursday{
-   left: 300rpx;
- }
- .checkboxselectedColor,#friday{
-   left: 400rpx;
- }
- .checkboxselectedColor,#saturday{
-   left: 500rpx;
- }
- .checkboxselectedColor,#sunday{
-   left: 600rpx;
- }
 
-.submit_butt{
+.checkboxselectedColor,
+#monday {
+  left: 0rpx;
+}
+
+.checkboxselectedColor,
+#tuesday {
+  left: 100rpx;
+}
+
+.checkboxselectedColor,
+#wednesday {
+  left: 200rpx;
+}
+
+.checkboxselectedColor,
+#thursday {
+  left: 300rpx;
+}
+
+.checkboxselectedColor,
+#friday {
+  left: 400rpx;
+}
+
+.checkboxselectedColor,
+#saturday {
+  left: 500rpx;
+}
+
+.checkboxselectedColor,
+#sunday {
+  left: 600rpx;
+}
+
+.submit_butt {
   position: absolute;
-  background-color: rgba(0,119,255);
+  background-color: rgba(0, 119, 255);
   color: aliceblue;
   width: 100%;
   top: 25rpx;
   left: 290rpx;
 }
-.name_background{
+
+.name_background {
   width: 678rpx;
   height: 70rpx;
   background: rgb(238, 238, 238);
   border-radius: 20rpx;
 }
-.name_input{
+
+.name_input {
   position: relative;
   margin-top: 20rpx;
-  
   left: 15rpx;
 }
-.input_class{
-  font-size:30rpx;
 
+.input_class {
+  font-size: 27rpx;
+  margin-top: 10rpx;
 }
-.sentence_background{
+
+.sentence_background {
   width: 678rpx;
   height: 70rpx;
 
   background: rgb(238, 238, 238);
   border-radius: 20rpx;
 }
-.sentence_input{
+
+.sentence_input {
   position: relative;
   margin-top: 20rpx;
   left: 10rpx;
 }
 
-.habit_image{
+.habit_image {
   position: absolute;
   top: 60rpx;
-
   width: 678rpx;
   padding-bottom: 10rpx;
 }
-.selected-{
+
+.selected- {
   position: relative;
   top: 10rpx;
   width: 93rpx;
   height: 93rpx;
   margin-left: 15rpx;
   border-radius: 8rpx;
-  border: 2rpx solid #dadada;
-  
-
-
+  border: 2rpx solid #ffffff;
 }
-.selected-image{
+
+.selected-image {
   position: relative;
   top: 10rpx;
   width: 93rpx;
   height: 93rpx;
   margin-left: 15rpx;
   border-radius: 8rpx;
-  border: 2rpx solid #2e71be;
+  border: 2rpx solid #00000071;
 }

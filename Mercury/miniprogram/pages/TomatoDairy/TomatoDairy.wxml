@@ -1,15 +1,21 @@
 <!--pages/calender/calender.wxml-->
 <view>
-  <view class="tomato" wx:for="{{habits}}" wx:for-item="item" wx:key="id">
+  <view class="date">{{date}}</view>
+  <image class="diary_pic" src="https://pic.downk.cc/item/5fe7376b3ffa7d37b3d25c81.png"></image>
+  <view class="tomato" wx:for="{{tomatos}}" wx:for-item="item" wx:key="id">
     <van-cell-group>
-      <view class="tomato_main" bind:tap="onDisplay">
-        <!--图片-->
-        <image class="tomato_img" src="{{item.img}}"></image>
-        <!--标题-->
-        <text class="tomato_title">{{item.title}}</text>
-        <text class="tomato_remark">  {{item.remark}}</text>
-      </view>  
+      <view wx:if="{{item.finish==true}}">
+        <view class="tomato_main">
+          <text class="tomato_name">{{item.name}}</text>
+          <text class="tomato_time"> {{item.time}}</text>
+        </view>
+      </view>
+      <view wx:if="{{item.finish==false}}">
+        <view class="tomato_notmain">
+          <text class="tomato_notname">{{item.name}}</text>
+          <text class="tomato_not">未完成</text>
+        </view>
+      </view>
     </van-cell-group>
   </view>
-  <view class="date">日期 </view>
 </view>

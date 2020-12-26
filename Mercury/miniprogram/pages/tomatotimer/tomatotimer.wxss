@@ -1,12 +1,13 @@
 /* pages/tomatotimer/tomatotimer.wxss */
 
-page{
+page {
   height: 100%;
   width: 100%;
 }
-.back-text{
+
+.back-text {
   position: absolute;
-  top : 280rpx;
+  top: 280rpx;
   left: 315rpx;
   width: 120rpx;
   height: 40rpx;
@@ -14,27 +15,31 @@ page{
   text-align: center;
   color: #428DFC;
 }
-.back-image{
+
+.back-image {
   position: absolute;
   height: 658rpx;
   width: 750rpx;
   bottom: 0;
 }
-.start-image{
+
+.start-image {
   position: absolute;
   left: 335rpx;
   top: 40vh;
   width: 80rpx;
   height: 80rpx;
 }
-.stop-image{
+
+.stop-image {
   position: absolute;
   left: 335rpx;
   top: 40vh;
   width: 80rpx;
   height: 80rpx;
 }
-.circle{
+
+.circle {
   position: absolute;
   top: 70rpx;
   width: 400rpx;
@@ -42,6 +47,7 @@ page{
   text-align: center;
   z-index: -1;
 }
+
 .time-text {
   position: absolute;
   left: 225rpx;
@@ -53,7 +59,8 @@ page{
   font-size: 72rpx;
   font-family: 'Courier New', Courier, monospace;
 }
-.start-count{
+
+.start-count {
   position: absolute;
   left: 225rpx;
   top: 190rpx;
@@ -61,14 +68,15 @@ page{
   height: 80rpx;
 }
 
-.calendar-icon{
+.calendar-icon {
   position: absolute;
-  left: 638rpx;
-  bottom: 44rpx;
-  width: 90rpx;
-  height: 90rpx;
+  left: 647rpx;
+  bottom: 49rpx;
+  width: 80rpx;
+  height: 80rpx;
 }
-.choose1{
+
+.choose1 {
   position: fixed;
   left: 624rpx;
   bottom: 30rpx;
@@ -77,8 +85,9 @@ page{
   line-break: loose;
   background-color: rgba(0, 119, 255, 100);
   border-radius: 64rpx;
-  }
-  .caleclass{
-    position: fixed;
-    z-index: 99999;
-  }
+}
+
+.caleclass {
+  position: fixed;
+  z-index: 99999;
+}
