@@ -10,7 +10,8 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    avatarUrl:""
+    avatarUrl:"",
+    openid:''
   },
   globalData:{
 
@@ -22,6 +23,7 @@ Page({
       current: 'current',
     })
   },
+  
   onLoad: function() {
     // 获取用户信息
     wx.getSetting({
