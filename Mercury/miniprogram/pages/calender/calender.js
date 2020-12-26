@@ -9,13 +9,13 @@ Page({
   data: {
     habits: [{
         id: 0,
-        title: "",
-        remark: "",
-        img: "",
-        checktimes: [],
-        week: {},
-        checked: false,
-        display: false
+      title: "",
+      remark: "",
+      img: "",
+      checktimes: [],
+      week: {},
+      checked:false,
+      display:false
       },
 
     ],
@@ -71,6 +71,14 @@ Page({
 
     wx.navigateTo({
       url: '../calender1/calender1?chang_id=' + e.currentTarget.id
+    })
+  },
+  calendar(e){
+    //console.log(e)
+    console.log(e)
+
+    wx.navigateTo({
+     url: '../calender1/calender1?chang_id='+e.currentTarget.id
     })
   },
   onLoad: function (options) {

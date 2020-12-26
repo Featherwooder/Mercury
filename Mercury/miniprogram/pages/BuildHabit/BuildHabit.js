@@ -11,8 +11,9 @@ Page({
       remark: "",
       img: "",
       checktimes: [],
-      week: {}
-
+      week: {},
+      display:false,
+      checked:false
     },
     selected: {
       "monday": false,
