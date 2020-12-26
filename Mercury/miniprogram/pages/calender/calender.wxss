@@ -87,6 +87,20 @@ color: #ffffff;
 top: 38rpx;
 }
 
+.delete{
+  position: relative;
+  top:-120rpx;
+  left:140rpx;
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 40rpx;
+  font-size: 44rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  color: #ffffff;
+    background-color: #0077ff;
+}
+
 /*.tips{
   position:absolute;
   left: 50rpx;
