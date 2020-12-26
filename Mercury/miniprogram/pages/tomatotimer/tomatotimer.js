@@ -106,7 +106,7 @@ Page({
     });
     console.log(this.data.date)
     wx.navigateTo({
-      url: '../../pages/tomatoLog/tomatoLog' + '?'+ 'date='+ this.data.date
+      url: '../../pages/TomatoDairy/TomatoDairy' + '?'+ 'date='+ this.data.date
     })
   },
   /**

@@ -1,74 +1,109 @@
 /* pages/calender/calender.wxss */
-
-.date{
-  position:fixed;
-  left: 54rpx;
-  top: 42rpx;
-  width: 224rpx;
-  height: 92rpx;
-  color: rgba(16, 16, 16, 100);
-  font-size: 56rpx;
+.date {
+  position: fixed;
+  left: 35rpx;
+  top: 37rpx;
+  width: 240rpx;
+  height: 98rpx;
+  color: #4b4b4b;
+  font-size: 48rpx;
   text-align: left;
-  font-family: SFUIText-regular;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
 }
-.tomato{
+
+.diary_pic {
+  position: fixed;
+  right: 22rpx;
+  top: 34rpx;
+  width: 288rpx;
+  height: 113rpx;
+  color: #0077ff;
+  font-size: 54rpx;
+  text-align: right;
+  font-family: Arial;
+}
+
+.tomato {
   position: relative;
   top: 180rpx;
-  width:376px;
+  width: 376px;
 }
-.tomato_main
-{
-  margin-top: 60rpx;
+
+.tomato_main {
+  margin-top: 16rpx;
   position: relative;
-  left: 54rpx;
-  width: 648rpx;
+  left: 20rpx;
+  width: 700rpx;
   height: 120rpx;
-  border-radius: 50rpx;
-  background-color: rgba(0, 119, 255, 100);
+  border-radius: 0rpx;
+  background-color: #ffffff;
   color: rgba(16, 16, 16, 100);
   font-size: 28rpx;
   text-align: center;
   font-family: Arial;
-  border:0px solid rgba(187, 187, 187, 100);
+  border: 4rpx solid #40a9ff;
 }
-.tomato_img{
+
+.tomato_name {
   position: relative;
-  top:12rpx;
-  left:-16rpx;
-  width: 92rpx;
-  height: 92rpx;
-  border-radius: 10rpx;
-}
-.tomato_title{
-  position: relative;
-  top :-16rpx;
-  left:6rpx;
+  top: 24rpx;
+  left: 6rpx;
   width: 194rpx;
   height: 68rpx;
-  color: rgba(248, 248, 248, 100);
-  font-size: 48rpx;
+  color: #40a9ff;
+  font-size: 50rpx;
   text-align: left;
   font-family: PingFangSC-regular;
 }
-.tomato_remark{
+
+.tomato_time {
   position: relative;
-  left: 16rpx; 
-   top :-14rpx;
-  width: 260rpx;
+  left: 20rpx;
+  top: 24rpx;
+  width: 50rpx;
   height: 46rpx;
-  color: rgba(216, 216, 216, 100);
-  font-size: 26rpx;
+  color: #40a9ff;
+  font-size: 40rpx;
+  text-align: right;
+  font-family: PingFangSC-regular;
+}
+
+.tomato_notmain{
+  margin-top: 16rpx;
+  position: relative;
+  left: 20rpx;
+  width: 700rpx;
+  height: 120rpx;
+  border-radius: 0rpx;
+  background-color: #ffffff;
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 4rpx solid #afafaf;
+}
+
+.tomato_notname{
+  position: relative;
+  top: 24rpx;
+  left: 6rpx;
+  width: 194rpx;
+  height: 68rpx;
+  color: #afafaf;
+  font-size: 50rpx;
   text-align: left;
   font-family: PingFangSC-regular;
 }
-.checkin{
+
+.tomato_not{
   position: relative;
-  width: 120rpx;
-  height: 120rpx;
-  line-height: 40rpx;
-  font-size: 44rpx;
-  border-radius: 30rpx;
-  text-align: center;
-  color: #ffffff;
-  background-color: #0077ff;
+  left: 20rpx;
+  top: 30rpx;
+  width: 50rpx;
+  height: 48rpx;
+  color: #afafaf;
+  font-size: 34rpx;
+  text-align: right;
+  font-family: PingFangSC-regular;
 }

@@ -1,0 +1,5 @@
+.blank{
+  margin-top: 400;
+  width:667rpx;
+  height: 100rpx;
+}

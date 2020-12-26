@@ -1,6 +1,7 @@
 <view class="page_all">
 
-<view class="suggestion_head">意见反馈</view>
+<view class="suggestion_head"></view>
+    <image class="sug_pic" src="https://pic.downk.cc/item/5fe749c83ffa7d37b3f16a5c.png"></image>
     <view class="input_background">
       <text class="input_head"> 请留下您宝贵的建议，畅所欲言！</text>
       <view class="input_blank">      

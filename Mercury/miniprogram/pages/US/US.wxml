@@ -1,5 +1,5 @@
 <!--pages/US/US.wxml-->
-<text class="lianxi">联系我们</text>
+<image class="lianxi" src="https://pic.downk.cc/item/5fe749c83ffa7d37b3f16a51.png"></image>
 <text class="backgrond"></text>
 <image class="usr" src="../../images/US_usr.png"></image>
 <text class="deve">Developers：</text>

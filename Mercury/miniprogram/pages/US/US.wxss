@@ -1,102 +1,111 @@
 /* pages/US/US.wxss */
-.lianxi{
+.lianxi {
   position: relative;
   left: 36rpx;
-top: 28rpx;
-width: 256rpx;
-height: 92px;
-color: rgba(16, 16, 16, 100);
-font-size: 64rpx;
-text-align: left;
-font-family: PingFangSC-regular;
+  top: 28rpx;
+  width: 478rpx;
+  height: 116rpx;
+  color: rgba(16, 16, 16, 100);
+  font-size: 64rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
 }
-.backgrond{
+
+.backgrond {
   position: absolute;
   left: 36rpx;
-top: 148rpx;
-width: 678rpx;
-height:478rpx;
-line-height: 40rpx;
-border-radius: 40rpx;
-background-color:#E4F0FF;
-color: rgba(16, 16, 16, 100);
-font-size: 28rpx;
-text-align: center;
-font-family: Arial;
+  top: 158rpx;
+  width: 678rpx;
+  height: 478rpx;
+  line-height: 40rpx;
+  border-radius: 40rpx;
+  background-color: #E4F0FF;
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
 }
-.usr{
+
+.usr {
   position: absolute;
   left: 72rpx;
-top: 186rpx;
-width: 42rpx;
-height: 42rpx;
+  top: 186rpx;
+  width: 42rpx;
+  height: 42rpx;
 }
-.deve{
+
+.deve {
   position: absolute;
   left: 134rpx;
-top: 182rpx;
-width: 222rpx;
-height: 50rpx;
-color: rgba(0, 0, 0, 1);
-font-size: 36rpx;
-text-align: left;
-font-family: PingFangSC-regular;
+  top: 182rpx;
+  width: 222rpx;
+  height: 50rpx;
+  color: rgba(0, 0, 0, 1);
+  font-size: 36rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
 }
-.us{
+
+.us {
   position: absolute;
   left: 72rpx;
-top: 262rpx;
-width: 300rpx;
-height: 40rpx;
-color: rgba(0, 0, 0, 1);
-font-size: 28rpx;
-text-align: left;
-font-family: PingFangSC-regular;
+  top: 262rpx;
+  width: 300rpx;
+  height: 40rpx;
+  color: rgba(0, 0, 0, 1);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
 }
-.thanks{
+
+.thanks {
   position: absolute;
   left: 72rpx;
-top: 332rpx;
-width: 196rpx;
-height: 40rpx;
-color: rgba(175, 175, 175, 100);
-font-size: 28rpx;
-text-align: left;
-font-family: PingFangSC-regular;
+  top: 332rpx;
+  width: 196rpx;
+  height: 40rpx;
+  color: rgba(175, 175, 175, 100);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
 }
-.QQ{
+
+.QQ {
   position: absolute;
   left: 436rpx;
-top: 496rpx;
-width: 138rpx;
-height: 34rpx;
-color: rgba(94, 94, 94, 100);
-font-size: 24rpx;
-text-align: left;
-font-family: PingFangSC-regular;
+  top: 496rpx;
+  width: 138rpx;
+  height: 34rpx;
+  color: rgba(94, 94, 94, 100);
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
 }
-.QQimg{
+
+.QQimg {
   position: absolute;
   left: 602rpx;
-top: 474rpx;
-width: 66rpx;
-height: 76rpx;
+  top: 474rpx;
+  width: 66rpx;
+  height: 76rpx;
 }
-.WX{
+
+.WX {
   position: absolute;
   left: 418rpx;
-top: 560rpx;
-width: 146rpx;
-height: 34rpx;
-color: rgba(94, 94, 94, 100);
-font-size: 24rpx;
-text-align: left;
-font-family: PingFangSC-regular;
+  top: 560rpx;
+  width: 146rpx;
+  height: 34rpx;
+  color: rgba(94, 94, 94, 100);
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
 }
-.WXimg{
+
+.WXimg {
   position: absolute;
   left: 614rpx;
-top: 550rpx;
-width: 54rpx;
-height: 66rpx;
+  top: 550rpx;
+  width: 54rpx;
+  height: 66rpx;
 }
