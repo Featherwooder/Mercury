@@ -1,11 +1,17 @@
+// const { fail } = require("assert");
+
 // pages/tomatotimer/tomatotimer.js
-import Dialog from '../../comments/dist/dialog/dialog';
+const todaydate = new Date()
+const app = getApp()
+// const daytomato = app.globalData.daytomato
+//var daytomato = wx.getStorageSync('daytomato')||{}
 Page({
   /**
    * 页面的初始数据
    */
   // ['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','52','54','55','56','57','58','59'],
   data: {
+
     multiArray: [
       ['00','05','10','15','20','25','30','35','40','45','50','55','60','65','70','75','80','85','90','95','100','105','110','115','120'],
       ['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','52','54','55','56','57','58','59']
@@ -25,9 +31,83 @@ Page({
     leftrpx : 163,
     startimg: true,
     startcount: false,
-    clockwise : true,
+    //以下是日志使用变量
+    today: new Date().getTime(),
+    date: '',
+    show: false,
+    minDate: new Date(new Date().getFullYear() - 1, new Date().getMonth(), new Date().getDate()).getTime(),
+    maxDate: new Date().getTime(),
+    showdialog: true,
+    tomatotitle:'',
+    tomatodo:'',
+    tomato: {
+      time: '',
+      name: '',
+      finish:false
+    },
+    formatter(day) {
+      //console.log(daytomato)
+      const year = day.date.getFullYear();
+      const month = day.date.getMonth() + 1;
+      const date = day.date.getDate();
+      const datetomato = year + '/' + month + '/' + date
+      if (app.globalData.daytomato[datetomato] === true) {
+        //console.log(daytomato[datetomato])
+        day.type = 'selected'
+      }
+      if (day.date.getFullYear() === todaydate.getFullYear() && day.date.getMonth() === todaydate.getMonth() && day.date.getDate() === todaydate.getDate() && app.globalData.daytomato[datetomato] === undefined) {
+        //如果是今天而且今天没有使用过那就不选中
+        day.type = 'null';
+      }
+      return day;
+      /*
+      var stordate = wx.getStorageSync('tomato-' + year + '/' + month + '/' + date)
+      //console.log(year + '/' + month + '/' + date)
+      if (stordate.length != 0) {
+        console.log(stordate)
+        day.type = 'selected';
+      }
+
+      const db=wx.cloud.database()
+      const testDB = wx.cloud.database({
+        env: 'mercury-3i5av'
+      })
+      const tomatos=db.collection('tomato')
+      tomatos.doc(app.globalData.openid + year + '/' + month + '/' + date).get({
+        success: function(res) {
+          // res.data 包含该记录的数据
+          date.type = 'selected'
+          console.log('success',res.data)
+        }
+      })
+      console.log(todaydate) 
+      console.log(day.date)&& day.type !== 'selected'
+      */
+    },
+
   },
-  
+
+  opencalendar: function () {
+    this.setData({ show: true });
+    console.log(this.data)
+  },
+  onClose() {
+    this.setData({ show: false });
+  },
+  formatDate(date) {
+    date = new Date(date);
+    return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
+  },
+  onConfirm(event) {
+    this.setData({
+      show: false,
+      date: this.formatDate(event.detail),
+    });
+    console.log(this.data.date)
+    wx.navigateTo({
+      url: '../../pages/tomatoLog/tomatoLog' + '?'+ 'date='+ this.data.date
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -39,6 +119,7 @@ Page({
       leftrpx: 350/750 * circlesize
     })
   },
+
   seterror: function () {
     console.log('error')
     wx.showToast({
@@ -47,15 +128,63 @@ Page({
       duration: 1000
     })
   },
-  test: function () {
+  bindKeyInput: function (e) {
+    this.setData({
+      tomatotitle: e.detail.value
+    })
+  },
+  starttimer:function () {
+    if (this.data.tomatotitle === '') {
+      console.log('测试：',this.data.tomatotitle)
+      wx.showToast({
+        title: '请输入内容',
+        duration:1000,
+        icon:'none'
+      })
+      return;
+    }
+    this.setData({
+      showdialog : true,
+    })
+    console.log('内容：',this.data.tomatotitle)
+    this.setData({
+      startcount : true,
+      startimg : false,
+    })
+    this.countdown();
+    this.data.tomato.name = this.data.tomatotitle
+    this.data.tomato.time = this.data.minback[0][this.data.multiIndex[0]] + ':' + this.data.minback[1][this.data.multiIndex[1]]
+    var tomatodo = this.data.tomatotitle
+    this.setData({
+      tomatodo : tomatodo,
+      tomatotitle  : ''
+    })
+    //存到本地
+    /*
+    let tomatos = wx.getStorageSync('tomato-date')||[];
+    tomatos.push(this.data.tomato)
+    console.log(tomatos)
+    wx.setStorageSync('tomato-date', tomatos)
+
     if (this.data.startimg == true && this.data.startcount == false){
       this.setData({
-        startcount :true,
+        startcount : true,
         startimg : false,
       })
       this.countdown();
     }
-  }, 
+    */
+  },
+  confirmcountdown: function () {
+    this.setData({
+      showdialog : false
+    })
+  },
+  cancelcountdown: function () {
+    this.setData({
+      showdialog : true
+    })
+  } ,
   stoptimer: function () {
     let that = this
     wx.showModal({
@@ -84,8 +213,41 @@ Page({
     console.log('sec=',this.data.sec)
     console.log('countdownNum=',this.data.countdownNum)
   },
-
+  save_daytomato:function(){
+    const db=wx.cloud.database()
+    const testDB = wx.cloud.database({
+      env: 'mercury-3i5av'
+    })
+    const daytomatos=db.collection('daytomato')
+    daytomatos.add({
+      // data 字段表示需新增的 JSON 数据
+      data: {
+        _id: app.globalData.openid,
+        daytomatos : app.globalData.daytomato,
+      },
+      success: function(res) {
+        // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+        console.log(res)
+      },
+      fail:function(res) {
+        //console.log('测试：',res)
+        daytomatos.doc(app.globalData.openid).update({
+          data:{
+            daytomatos: app.globalData.daytomato
+          },
+          success: function(res) {
+            // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+            console.log(res)
+          },
+        })
+      }
+    })
+  },
   countdown : function() {
+    var date = new Date().toLocaleDateString()
+    app.globalData.daytomato[date]= true
+    wx.setStorageSync('daytomato', app.globalData.daytomato)
+    this.save_daytomato()
     let that = this
     let countDownNum = that.data.countdownNum;//获取倒计时初始值
     let Time = this.data.multiIndex;
@@ -96,11 +258,10 @@ Page({
     var minBack = JSON.parse(JSON.stringify(that.data.minback));
     console.log('开始时：',Time, countDownNum)
     //如果将定时器设置在外面，那么用户就看不到countDownNum的数值动态变化，所以要把定时器存进data里面
-      that.data.timer = setInterval(function () {//这里把setInterval赋值给变量名为timer的变量
-        //在倒计时还未到0时，这中间可以做其他的事情，按项目需求来   
+      that.data.timer = setInterval(function () {
+ 
         if (countDownNum == 0 || that.data.test == 0) {
           if (that.data.startimg == false){
-            if (that.data.clockwise == true){
               console.log('倒计时结束')
               clearInterval(that.data.timer);
               Time = [5, 0]
@@ -114,11 +275,50 @@ Page({
                 startimg: true,
                 test : 1,
                 circleNum : 100,
+                tomatotitle: ''
               })           
-              console.log('that',that.data)
-            }
-          }else{//用户按停止之后恢复25分钟
-            console.log(that.data)
+              that.data.tomato.finish = true
+
+              //上传倒数据库
+              const db=wx.cloud.database()
+              const testDB = wx.cloud.database({
+                env: 'mercury-3i5av'
+              })
+              const tomatos=db.collection('tomato')
+              const _ = db.command
+              tomatos.add({
+                // data 字段表示需新增的 JSON 数据
+                data: {
+                  _id: app.globalData.openid + new Date().toLocaleDateString(),
+                  tomatos : [that.data.tomato],
+                  date: new Date().toLocaleDateString()
+                },
+                success: function(res) {
+                  // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+                  console.log(res)
+                },
+                fail:function(res) {
+                  //console.log('测试：',res)
+                  tomatos.doc(app.globalData.openid + new Date().toLocaleDateString()).update({
+                    data:{
+                      tomatos: _.push(that.data.tomato)
+                    },
+                    success: function(res) {
+                      // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+                      console.log(res)
+                    },
+                  })
+                }
+              })
+              // let tomatos = wx.getStorageSync('tomato-' + new Date().toLocaleDateString())||[];
+              // tomatos.push(that.data.tomato)
+              // console.log(tomatos)
+              // wx.setStorageSync('tomato-' + new Date().toLocaleDateString(), tomatos)
+
+              //console.log('that',that.data)
+          }
+          else{//用户按停止之后恢复25分钟
+            //console.log(that.data)
             clearInterval(that.data.timer); 
             Time = [5, 0]
             that.setData({
@@ -131,12 +331,46 @@ Page({
               countdownNum : 1500,
               circleNum : 100,
               test : 1,
+              tomatotitle:''
             })
+            that.data.tomato.finish = false
+            //上传倒数据库
+            const db=wx.cloud.database()
+            const testDB = wx.cloud.database({
+              env: 'mercury-3i5av'
+            })
+            const tomatos=db.collection('tomato')
+            const _ = db.command
+            tomatos.add({
+              // data 字段表示需新增的 JSON 数据
+              data: {
+                _id: app.globalData.openid + new Date().toLocaleDateString(),
+                tomatos : [that.data.tomato],
+                date: new Date().toLocaleDateString()
+              },
+              success: function(res) {
+                // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+                console.log(res)
+              },
+              fail:function(res) {
+                //console.log('测试：',res)
+                tomatos.doc(app.globalData.openid + new Date().toLocaleDateString()).update({
+                  data:{
+                    tomatos: _.push(that.data.tomato)
+                  },
+                  success: function(res) {
+                    // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+                    console.log(res)
+                  },
+                })
+              }
+            })
+            // let tomatos = wx.getStorageSync('tomato-' + new Date().toLocaleDateString())||[];
+            // tomatos.push(that.data.tomato)
+            // console.log(tomatos)
+            // wx.setStorageSync('tomato-' + new Date().toLocaleDateString(), tomatos)
           }
-          //这里特别要注意，计时器是始终一直在走的，如果你的时间为0，那么就要关掉定时器！不然相当耗性能
-          //因为timer是存在data里面的，所以在关掉时，也要在data里取出后再关闭
-          // clearInterval(that.data.timer);
-          //关闭定时器之后，可作其他处理codes go here
+
         }else{
         //每隔一秒countDownNum就减一，实现同步
         countDownNum--;
@@ -162,7 +396,8 @@ Page({
           multiIndex: Time,
           multiArray: timeArray,
           countdownNum: countDownNum,
-          circleNum: circlenum
+          circleNum: circlenum,
+
         })}
         //that.data.multiArray[0][Time[0]] = lastnum;
       }, 10)

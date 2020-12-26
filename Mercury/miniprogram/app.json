@@ -1,12 +1,13 @@
 {
   "pages": [
     "pages/index1/index1",
-    "pages/userBook/userBook",
-    "pages/BuildHabit/BuildHabit",
-    "pages/tomatotimer/tomatotimer",
-    "pages/calender/calender",
-    "pages/suggestion/suggestion",    
     "pages/second/second",
+    "pages/temp/temp",
+    "pages/userBook/userBook",
+    "pages/tomatotimer/tomatotimer",
+    "pages/BuildHabit/BuildHabit",
+    "pages/calender/calender",
+    "pages/suggestion/suggestion",
     "pages/userinfo/userinfo",
     "pages/index/index",
     "pages/userConsole/userConsole",
@@ -20,7 +21,6 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/US/US"
-
   ],
   "window": {
     "backgroundColor": "#0094ff",

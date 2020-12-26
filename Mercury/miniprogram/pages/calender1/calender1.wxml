@@ -6,4 +6,6 @@
  * is-open [Boolean} 是否开启插入模式
   -->
 <!-- <view class='other'>我是其他元素</view> -->
-<calendar selected="{{selected}}" bindselect="bindselect"  is-open='true' />
+<view bindanimationstart="setdate" ></view>
+
+<calendar selected="{{selected}}" bindgetdate="bindgetdate" bindselect="bindselect"  is-open='true' />

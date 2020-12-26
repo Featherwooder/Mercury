@@ -1,4 +1,31 @@
 <!--pages/tomatotimer/tomatotimer.wxml-->
+
+<view hidden="{{show}}">
+  <van-circle class="circle"
+  value="{{ circleNum }}"
+  stroke-width="2"
+  layer-color= "transparent"
+  color="#428DFC"
+  size="{{circlesize}}"
+ ></van-circle>
+ </view>
+<view class="caleclass">
+  <van-calendar 
+  title="番茄日志"
+  min-date="{{ minDate }}"
+  max-date="{{ maxDate }}"
+  show="{{ show }}" 
+  formatter="{{ formatter }}"
+  show-confirm="{{ false }}" 
+  bind:close="onClose"
+  bind:confirm="onConfirm"
+  color= "#428DFC"
+  default-date="{{today}}"
+  show-mark="{{true}}"
+  />
+</view>
+
+
 <view wx:if="{{startimg}}">
   <image class="back-image" src="https://pic.downk.cc/item/5fdb695a3ffa7d37b3c01314.png"></image>
   <text class="back-text">休息中</text>
@@ -8,21 +35,14 @@
   <text class="back-text">专注中</text>
 </view>
 
-<view wx:if="{{startimg}}" bindtap="test">
+<view wx:if="{{startimg}}" bindtap="confirmcountdown">
   <image  class="start-image" src="../../images/start.png"></image>
 </view>
 <view wx:else bindtap="stoptimer">
   <image class="stop-image" src="../../images/stop.png"></image>
 </view>
 
-<van-circle class="circle"
-  value="{{ circleNum }}"
-  clockwise="{{clockwise}}"
-  stroke-width="2"
-  layer-color= "transparent"
-  color="#428DFC"
-  size="{{circlesize}}"
- ></van-circle>
+
 <view>
   <picker mode="multiSelector"  bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
     <text class="time-text">{{multiArray[0][multiIndex[0]]}}:{{multiArray[1][multiIndex[1]]}}</text>  
@@ -30,6 +50,13 @@
 </view>
 <view wx:if="{{startcount}}" class="start-count" bindtap="seterror"> </view>
 
-<view>
-  <image class="calender-icon" src="https://pic.downk.cc/item/5fe44d573ffa7d37b38141ee.png"></image>
+<view bindtap="opencalendar">
+  <text class="choose1"></text>
+  <image class="calendar-icon" src="https://pic.downk.cc/item/5fe44d573ffa7d37b38141ee.png"></image>
+  
 </view>
+
+
+<modal hidden="{{showdialog}}" title="请输入要专注的内容" confirm-text="确认" cancel-text="取消" bindcancel="cancelcountdown" bindconfirm="starttimer">
+    <input value="{{tomatotitle}}" bindinput="bindKeyInput" type='text' placeholder="请输入内容" />
+</modal>

@@ -40,6 +40,7 @@ page{
   width: 400rpx;
   height: 400rpx;
   text-align: center;
+  z-index: -1;
 }
 .time-text {
   position: absolute;
@@ -60,10 +61,24 @@ page{
   height: 80rpx;
 }
 
-.calender-icon{
+.calendar-icon{
   position: absolute;
-  left: 629rpx;
+  left: 638rpx;
   bottom: 44rpx;
-  width: 110rpx;
-  height: 110rpx;
+  width: 90rpx;
+  height: 90rpx;
 }
+.choose1{
+  position: fixed;
+  left: 624rpx;
+  bottom: 30rpx;
+  width: 114rpx;
+  height: 114rpx;
+  line-break: loose;
+  background-color: rgba(0, 119, 255, 100);
+  border-radius: 64rpx;
+  }
+  .caleclass{
+    position: fixed;
+    z-index: 99999;
+  }

@@ -11,8 +11,9 @@ Page({
       remark: "",
       img: "",
       checktimes: [],
-      week: {}
-
+      week: {},
+      display:false,
+      checked:false
     },
     selected: {
       "monday": false,
@@ -166,16 +167,16 @@ Page({
             habits.push(this.data.habit);
             //console.log(habits)
             wx.setStorageSync("habits", habits);
-            
-            const db=wx.cloud.database()
+
+            const db = wx.cloud.database()
             console.log(db)
-            const test =db.collection('test')
+            const test = db.collection('test')
             db.collection('test').add({
               data: {
                 _id: 'habits', // 可选自定义 _id，在此处场景下用数据库自动分配的就可以了
                 habits
               },
-              success: function(res) {
+              success: function (res) {
                 // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
                 console.log(res)
               }
@@ -267,6 +268,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+        // 1.获取页面栈(返回一个数组,包含了所有曾经去过的页面)
+        var pages = getCurrentPages(); //可以log看看是什么(里面什么都有--)
+        console.log(pages)
+        // 2. 拿到上一页(数组长度-2就是上一页)
+        var beforePage = pages[pages.length - 2];
+        // 3. 执行上一页 onLoad 函数(刷新数据)
+        // 假设请求后端数据并渲染页面的函数是: getNavGird()
+        beforePage.onLoad()
 
   },
 
@@ -281,6 +290,9 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+
+
+
 
   },
 
