@@ -1,18 +1,14 @@
 {
   "pages": [
 
+    "pages/index1/index1", 
     "pages/second/second",
-    "pages/index1/index1",
+    "pages/temp/temp",
     "pages/userBook/userBook",
     "pages/tomatotimer/tomatotimer",
     "pages/BuildHabit/BuildHabit",
     "pages/calender/calender",
     "pages/suggestion/suggestion",    
-<<<<<<< HEAD
-    "pages/temp/temp",
-=======
-    "pages/second/second",
->>>>>>> c401a80ca0d1b3c1f924841d67ab9c866c402846
     "pages/userinfo/userinfo",
     "pages/index/index",
     "pages/userConsole/userConsole",
