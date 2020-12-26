@@ -203,5 +203,5 @@
   height: 93rpx;
   margin-left: 15rpx;
   border-radius: 8rpx;
-  border: 2rpx solid #000000;
+  border: 2rpx solid #2e71be;
 }

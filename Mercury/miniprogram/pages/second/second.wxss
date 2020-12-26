@@ -6,7 +6,7 @@ page{
   position: fixed;
   margin-left: 54rpx;
   margin-top: 32rpx;
-  width: 130rpx;
+  width: 160rpx;
   height: 40rpx;
   color: rgba(175, 175, 175, 100);
   font-size: 28rpx;
@@ -193,3 +193,88 @@ border-radius: 64rpx;
     font-size: 28rpx;
     letter-spacing:7rpx;
   }
+  .card{
+    backface-visibility: hidden;
+  }
+  .card2{
+     /* background: yellow; */
+ /* 默认显示正面 */
+ transform: rotateY(-180deg); 
+
+  }
+  .habit{
+    position: relative;
+    top: 892rpx;
+    width:752rpx;
+  }
+  .habit_main
+  {
+    margin-top: 10rpx;
+    position: relative;
+    left: 36rpx;
+    width: 664rpx;
+    height: 92rpx;
+  border-radius: 40rpx;
+  background-color: rgba(255, 255, 255, 100);
+    color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  font-family: Arial;
+  border: 3px solid rgba(121, 182, 252, 100);
+  }
+  .habit_img{
+    text-align: left;
+    position: relative;
+    top:14rpx;
+    left:36rpx;
+    width: 72rpx;
+    height: 72rpx;
+ 
+  }
+  .habit_title{
+    text-align: left;
+    position: relative;
+    top :-14rpx;
+    left:60rpx;
+    width: 40px;
+height: 28px;
+color: rgba(0, 119, 255, 100);
+font-size: 20px;
+text-align: left;
+font-family: PingFangSC-regular; }
+  .habits_finish{
+    position: relative;
+    float: right;
+    top: 18rpx;
+    right:34rpx;
+    width: 64rpx;
+    height: 44rpx;
+    color: rgba(121, 182, 252, 100);
+    font-size: 32rpx;
+    text-align: left;
+    font-family: PingFangSC-regular; }
+    .pointer1{
+    position: relative;
+    float: right;
+    right: 30rpx;
+    top: 22rpx;
+    width: 36rpx;
+height: 36rpx;
+    }
+    .pointer2{
+      position: relative;
+      float: right;
+      right: 10rpx;
+      top: 22rpx;
+      width: 36rpx;
+  height: 36rpx;
+      }
+      .check{
+        position: relative;
+        text-align: center;
+        width: 250rpx;
+        height: 92rpx;
+        color:#FFFFFF;
+  background-color:#0077ff;
+  border-radius: 40rpx;
+font-size: 50rpx;
+      }

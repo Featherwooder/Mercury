@@ -2,39 +2,60 @@
 //打卡日历页面
 
 Page({
- /**
+  /**
    * 页面的初始数据
    */
   data: {
+    id: -1,
+    habits: [{
+      id: 0,
+      title: "",
+      remark: "",
+      img: "",
+      checktimes: [],
+      week: {},
+      checked: false,
+      display: false
+    }, ],
     selected: [
-      {
-        date: '2020-12-21'
-      }, {
-        date: '2020-12-02'
-      },{
-        date: '2018-5-24'
-      },{
-        date: '2018-5-25'
-      }
+
     ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) { },
+  onLoad: function (options) {
+    var id = parseInt(options.chang_id)
+    // console.log(options)
+    var habits = wx.getStorageSync("habits") || [];
+    let selected = this.data.selected
+    console.log(habits[id].checktimes)
+    var i = 0
+    console.log(habits[id].checktimes.length)
+    for (i = 0; i < habits[id].checktimes.length; i++) {
+      var tmp = {
+        date: habits[id].checktimes[i]
+      }
+      selected.push(tmp)
+    }
+    console.log(selected)
+    this.setData({
+      id: id,
+      habits,
+      selected
+    })
+  },
   /**
-  * 日历是否被打开
-  */
+   * 日历是否被打开
+   */
   bindselect(e) {
-    console.log(e.detail.ischeck)
+
   },
   /**
    * 获取选择日期
    */
   bindgetdate(e) {
-    let time = e.detail;
-    console.log(time)
 
   }
 })
