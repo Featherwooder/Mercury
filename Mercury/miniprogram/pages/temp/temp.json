@@ -1,7 +1,0 @@
-{
-  "usingComponents": {    
-    "van-button": "../../comments/dist/button/index",
-    "van-cell": "../../comments/dist/cell/index",
-    "van-cell-group": "../../comments/dist/cell-group/index",
-    "van-swipe-cell": "../../comments/dist/swipe-cell/index"}
-}

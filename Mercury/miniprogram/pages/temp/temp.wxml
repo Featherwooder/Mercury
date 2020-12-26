@@ -1,6 +1,0 @@
-<view class="content">
-  <view class="sliderContent">
-    <input placeholder="验证码" placeholder-class="input-placeholder" disabled="{{disabled}}" />
-    <view class="slider" bindtouchstart="moveSendBtnStart" bindtouchend="moveSendBtnEnd" bindtouchmove="moveSendBtn" style="left:{{moveSendBtnLeft}}rpx;background-color:{{SendBtnColor}}">发送</view>
-  </view>
-</view>
