@@ -12,10 +12,7 @@ Page({
     requestResult: '',
     avatarUrl:""
   },
-  globalData:{
 
-
-  },
   handlePreviewImage(){
     wx-wx.previewImage({
       urls:[this.data.avatarUrl] ,
