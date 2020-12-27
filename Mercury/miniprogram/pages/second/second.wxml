@@ -5,7 +5,6 @@
 <image class="image1" src="/images/2_today.png"></image>
 <image class="image2" src="/images/2_user.png" bindtap="user_Info"></image>
 
-
 <view class="card1 card" data-id="1" bindtap="turn" animation="{{animation1}}">
   <image class="image3" src="https://pic.downk.cc/item/5fdb655a3ffa7d37b3bc8de1.png"></image>
   <text class="text1"> </text>
@@ -14,8 +13,7 @@
 </view>
 
 <view class="card2 card" data-id="2" bindtap="turn" animation="{{animation2}}">
-  <image class="image3" src="https://pic.downk.cc/item/5fdb655a3ffa7d37b3bc8dd3.png"></image>
-  <text class="text_egg">\n\n恭喜你发现彩蛋~</text>
+  <image class="image3" src="https://pic.downk.cc/item/5fe822a13ffa7d37b3b46df0.png"></image>
   <text class="soup_text">{{soup_back}}</text>
 </view>
 

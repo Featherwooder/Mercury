@@ -248,8 +248,11 @@ Page({
     })
   },
   countdown : function() {
-    var date = new Date().toLocaleDateString()
-    app.globalData.daytomato[date]= true
+    const year = todaydate.getFullYear();
+      const month = todaydate.getMonth() + 1;
+      const date = todaydate.getDate();
+      const  datetomato= year + '/' + month + '/' + date
+    app.globalData.daytomato[datetomato]= true
     wx.setStorageSync('daytomato', app.globalData.daytomato)
     this.save_daytomato()
     let that = this
@@ -283,7 +286,7 @@ Page({
               })           
               that.data.tomato.finish = true
 
-              //上传倒数据库
+              //上传到数据库
               const db=wx.cloud.database()
               const testDB = wx.cloud.database({
                 env: 'mercury-3i5av'
@@ -339,6 +342,7 @@ Page({
             })
             that.data.tomato.finish = false
             //上传倒数据库
+
             const db=wx.cloud.database()
             const testDB = wx.cloud.database({
               env: 'mercury-3i5av'
@@ -348,9 +352,9 @@ Page({
             tomatos.add({
               // data 字段表示需新增的 JSON 数据
               data: {
-                _id: app.globalData.openid + new Date().toLocaleDateString(),
+                _id: app.globalData.openid + datetomato,
                 tomatos : [that.data.tomato],
-                date: new Date().toLocaleDateString()
+                date: datetomato
               },
               success: function(res) {
                 // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
@@ -358,7 +362,7 @@ Page({
               },
               fail:function(res) {
                 //console.log('测试：',res)
-                tomatos.doc(app.globalData.openid + new Date().toLocaleDateString()).update({
+                tomatos.doc(app.globalData.openid + datetomato).update({
                   data:{
                     tomatos: _.push(that.data.tomato)
                   },
@@ -404,7 +408,7 @@ Page({
 
         })}
         //that.data.multiArray[0][Time[0]] = lastnum;
-      }, 10)
+      }, 1000)
       //console.log(this.data.timer)
   },
   /**

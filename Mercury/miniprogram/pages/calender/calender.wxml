@@ -2,7 +2,7 @@
 
 <view class="habit" wx:for="{{habits}}" wx:for-item="item" wx:key="id">
 
-  <van-swipe-cell right-width="{{ 130 }}">
+  <van-swipe-cell right-width="{{ 160 }}">
     <van-cell-group>
       <view id="{{item.id}}" bindtap="calendar">
         <view class="habit_main" bind:tap="onDisplay">

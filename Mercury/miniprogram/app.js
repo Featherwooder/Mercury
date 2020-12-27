@@ -30,15 +30,10 @@ App({
         env: 'mercury-3i5av',
         traceUser: true,
       })
-
     }
     that.getopenid()
-
   },
-
-
   getopenid() {
-
     let page = this;
     wx.cloud.callFunction({
       name: 'getOpenid',
@@ -64,33 +59,7 @@ App({
             wx.setStorageSync('habits', res.data.habits)
           }
         })
-
-        // const usr_openid = db.collection('openid')
-        // const _ = db.command
-        // usr_openid.add({
-        //   data: {
-        //     _id: "usr_openid" + page.globalData.openid,
-        //     usropenid: [openid]
-        //   },
-        //   success: function (res) {
-        //     console.log(res);
-        //   },
-        //   fail: function (res) {
-
-        //     usr_openid.doc('usr_openid').update({
-        //       data: {
-        //         usropenid: _.push(openid)
-        //       },
-        //       fail:function(res){
-        //         console.log(res);
-        //       }
-        //     })
-
-        //}
-        //})
-
       }
     })
-    //console.log('here',page.globalData)
   }
 })

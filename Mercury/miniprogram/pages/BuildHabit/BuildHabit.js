@@ -31,42 +31,36 @@ Page({
 
       value: 1,
       selected: false,
-      src: "../../images/sport/baseball.png",
-      title: 'baseball'
+      src: "../../images/pen.jpg",
     }, {
       value: 2,
       selected: false,
-      src: "../../images/sport/bicycle.png",
-      title: 'bicycle'
+      src: "../../images/brush.jpg",
     }, {
       value: 3,
       selected: false,
-      src: "../../images/sport/diving-mask.png",
-      title: 'diving-mask'
+      src: "../../images/sound.jpg",
     }, {
       value: 4,
       selected: false,
-      src: "../../images/sport/dumbbell.png",
-      title: 'dumbbell'
+      src: "../../images/yearbook.jpg",
     }, {
       value: 5,
       selected: false,
-      src: "../../images/sport/golf.png",
-      title: 'golf'
+      src: "../../images/homework.jpg",
     }, {
       value: 6,
       selected: false,
-      src: "../../images/sport/ping-pong-racket.png",
-      title: 'ping-pong'
+      src: "../../images/book.jpg",
     }, {
       value: 7,
       selected: false,
-      src: "../../images/sport/skates.png",
+      src: "../../images/sport/bicycle.png",
       title: 'skates'
     }, {
       value: 8,
       selected: false,
-      src: "../../images/sport/soccer-ball.png",
+      src: "../../images/sport/skipping-rope.png",
       title: 'soccer-ball'
     }, {
       value: 9,
@@ -76,17 +70,17 @@ Page({
     }, {
       value: 10,
       selected: false,
-      src: "../../images/sport/bowling.png",
+      src: "../../images/sport/ping-pong-racket.png",
       title: 'bowling'
     }, {
       value: 11,
       selected: false,
-      src: "../../images/sport/skipping-rope.png",
+      src: "../../images/sport/baseball.png",
       title: 'skipping-rope'
     }, {
       value: 12,
       selected: false,
-      src: "../../images/sport/stopwatch.png",
+      src: "../../images/sport/golf.png",
       title: 'stopwatch'
     }]
 

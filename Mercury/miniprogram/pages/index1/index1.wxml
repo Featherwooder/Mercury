@@ -27,7 +27,7 @@
   ></button>
   </view>
   <view wx:else >
-    <image class="check_in" src="../../images/1_clickin.png"></image>
+    <image class="check_in" src="https://pic.downk.cc/item/5fe83bea3ffa7d37b3c087cb.png"></image>
   <button 
   style="width:80vw;height:80rpx"
     class="userinfo-avatar"

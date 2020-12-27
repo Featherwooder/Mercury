@@ -1,27 +1,28 @@
 const app = getApp()
 Page({
   data: {
-    id:'',
+    id: '',
     username: '用户名',
     userInfo: {},
-    sug:"",
-    noteNowLen:0,
-    noteMaxLen:100
+    sug: "",
+    noteNowLen: 0,
+    noteMaxLen: 100
   },
-  input_act(e){
-    var that=this;
-    var value=e.detail.value,len=parseInt(value.length);
+  input_act(e) {
+    var that = this;
+    var value = e.detail.value,
+      len = parseInt(value.length);
     console.log(e)
     that.setData({
-      sug:value,
-      noteNowLen:len
+      sug: value,
+      noteNowLen: len
     })
   },
-  Submit(e){
-    var that=this
+  Submit(e) {
+    app.get_auth()
+    var that = this
     console.log(e)
-    if(that.data.noteNowLen==0)
-    {
+    if (that.data.noteNowLen == 0) {
       wx.showToast({
         title: '您的宝贵意见还没有输入呢',
         icon: 'none'
@@ -29,46 +30,57 @@ Page({
       return
     }
     wx.showModal({
-      title:"确认提交",
-      content:"感谢您宝贵的建议，点击确认即可提交",
+      title: "确认提交",
+      content: "感谢您宝贵的建议，点击确认即可提交",
       success: (result) => {
-        if(result.confirm){
-            var reqTask = wx.request({
-            url: '',
-            data: {},
-            header: {'content-type':'application/json'},
-            method: 'GET',
-            dataType: 'json',
-            responseType: 'text',
-            success: (result) => {
-              
+        if (result.confirm) {
+          const db = wx.cloud.database()
+          const suggestions = db.collection('suggestions')
+          const _ = db.command
+          suggestions.add({
+            data: {
+              _id: app.globalData.openid,
+              suggestions: [this.data.sug]
             },
-            fail: () => {},
-            complete: () => {}
-          });
-          
+            success: function (res) {
+              console.log(res);
+            },
+            fail: function (res) {
+
+              suggestions.doc(app.globalData.openid).update({
+                data: {
+                  suggestions: _.push(this.data.sug)
+                },
+                fail: function (res) {
+                  console.log(res);
+                }
+              })
+
+            }
+          })
+
           wx.showToast({
             title: '感谢您的反馈',
             icon: 'loading',
             duration: 1500,
-            success:function(){
-              setTimeout(function(){
+            success: function () {
+              setTimeout(function () {
                 wx.showToast({
                   title: '提交成功',
                   icon: 'success',
                   duration: 500,
-                  success:function(){
-                    setTimeout(function(){
+                  success: function () {
+                    setTimeout(function () {
                       wx.navigateBack({
                         delta: 0,
                       })
-                    },500)
+                    }, 500)
                   }
                 })
-              },1500)
+              }, 1500)
             }
           });
-          
+
         }
       }
     })
@@ -78,8 +90,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      userInfo:app.globalData.userInfo,
-      username:app.globalData.userInfo.nickName
+      userInfo: app.globalData.userInfo,
+      username: app.globalData.userInfo.nickName
     })
   },
 

@@ -43,7 +43,7 @@
       <view class="second_content">
         <text class="second_head">给习惯起个名字</text>
         <view class="name_background">
-          <input value="{{habit.title}}" class="name_input" name="name_input" type="text" maxlength="4" bindinput="habit_name" placeholder="例如混元功法（不超过四个字）"
+          <input value="{{habit.title}}" class="name_input" name="name_input" type="text" maxlength="6" bindinput="habit_name" placeholder="例如混元功法（不超过四个字）"
           placeholder-class="input_class" />
         </view>
       </view>

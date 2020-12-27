@@ -26,7 +26,7 @@
 .habit {
   position: relative;
   top: 180rpx;
-  width: 376px;
+  width: 752rpx;
 }
 
 .habit_main {

@@ -55,6 +55,26 @@ Page({
             habits
           })
           wx.setStorageSync("habits", habits);
+          const db = wx.cloud.database()
+        
+          db.collection('habits').add({
+            data: {
+              _id: app.globalData.openid, // 可选自定义 _id，在此处场景下用数据库自动分配的就可以了
+              habits
+            },
+            success: function (res) {
+              // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+              console.log('cheng',res)
+            },
+            fail:function(res){
+              console.log('shi',res)
+              db.collection('habits').doc(app.globalData.openid).update({
+                data:{
+                  habits
+                }
+              })
+            }
+          })
           // 1.获取页面栈(返回一个数组,包含了所有曾经去过的页面)
           var pages = getCurrentPages(); //可以log看看是什么(里面什么都有--)
           console.log(pages)
