@@ -1,12 +1,11 @@
 {
   "pages": [
-
     "pages/index1/index1", 
     "pages/second/second",
     "pages/temp/temp",
     "pages/userBook/userBook",
-        "pages/tomatotimer/tomatotimer",
-        "pages/tomatoLog/tomatoLog",
+    "pages/tomatotimer/tomatotimer",
+    "pages/TomatoDairy/TomatoDairy",
     "pages/BuildHabit/BuildHabit",
     "pages/calender/calender",
     "pages/suggestion/suggestion",    
@@ -26,10 +25,10 @@
 
   ],
   "window": {
-    "backgroundColor": "#0094ff",
+    "backgroundColor": "#FFFFFF",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#0077FF",
-    "navigationBarTitleText": "Mercury",
+    "navigationBarTitleText": "Habitest",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",

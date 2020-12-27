@@ -1,104 +1,116 @@
 /* pages/calender/calender.wxss */
-.topp{
-  position:fixed;
+.topp {
+  position: fixed;
   width: 377px;
-height: 90px;
-opacity:100;
-line-height: 20px;
-background-color: #ffffff;
-font-size: 14px;
-text-align: center;
-font-family: Arial;
+  height: 114rpx;
+  opacity: 100;
+  line-height: 20px;
+  background-color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  font-family: Arial;
 }
-.myhabit{
-  position:fixed;
-  left: 54rpx;
-  top: 42rpx;
-  width: 224rpx;
-  height: 92rpx;
+
+.myhabit {
+  position: fixed;
+  left: 25rpx;
+  top: 28rpx;
+  width: 328rpx;
+  height: 114rpx;
   color: rgba(16, 16, 16, 100);
   font-size: 56rpx;
   text-align: left;
   font-family: SFUIText-regular;
 }
-.habit{
+
+.habit {
   position: relative;
   top: 180rpx;
-  width:376px;
-}
-.habit_main
-{
-  margin-top: 60rpx;
-  position: relative;
-  left: 54rpx;
-  width: 648rpx;
-  height: 120rpx;
-border-radius: 50rpx;
-background-color: rgba(0, 119, 255, 100);
-color: rgba(16, 16, 16, 100);
-font-size: 28rpx;
-text-align: center;
-font-family: Arial;
-border:0px solid rgba(187, 187, 187, 100);
-}
-.habit_img{
-  position: relative;
-  top:12rpx;
-  left:-16rpx;
-  width: 92rpx;
-height: 92rpx;
-border-radius: 10rpx;
-}
-.habit_title{
-  position: relative;
-  top :-16rpx;
-  left:6rpx;
-  width: 194rpx;
-height: 68rpx;
-color: rgba(248, 248, 248, 100);
-font-size: 48rpx;
-text-align: left;
-font-family: PingFangSC-regular;
-}
-.habit_remark{
-  position: relative;
-  left: 16rpx; 
-   top :-14rpx;
-  width: 260rpx;
-height: 46rpx;
-color: rgba(216, 216, 216, 100);
-font-size: 26rpx;
-text-align: left;
-font-family: PingFangSC-regular;
-}
-.checkin{
-  position: relative;
-width: 120rpx;
-height: 120rpx;
-line-height: 40rpx;
-font-size: 44rpx;
-border-radius: 30rpx;
-text-align: center;
-color: #ffffff;
-  background-color: #0077ff;
-}
-.anniu{
-  position: relative;
-top: 38rpx;
+  width: 752rpx;
 }
 
-.delete{
+.habit_main {
+  margin-top: 20rpx;
   position: relative;
-  top:-120rpx;
-  left:140rpx;
+  left: 28rpx;
+  width: 680rpx;
+  height: 120rpx;
+  border-radius: 30rpx;
+  background-color: #ffffff;
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 3px solid #1984ff;
+}
+
+.habit_img {
+  position: relative;
+  top: 12rpx;
+  left: -16rpx;
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 10rpx;
+}
+
+.habit_title {
+  position: relative;
+  top: -16rpx;
+  left: 6rpx;
+  width: 194rpx;
+  height: 68rpx;
+  color: #1984ff;
+  font-size: 48rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  font-weight: 600;
+}
+
+.habit_remark {
+  position: relative;
+  left: 16rpx;
+  top: -14rpx;
+  width: 260rpx;
+  height: 46rpx;
+  color: #5e5e5e;
+  font-size: 26rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.checkin {
+  position: relative;
   width: 120rpx;
   height: 120rpx;
   line-height: 40rpx;
   font-size: 44rpx;
   border-radius: 30rpx;
   text-align: center;
-  color: #ffffff;
-    background-color: #0077ff;
+  color: #1984ff;
+  background-color: #ffffff;
+  border: 3px solid #1984ff;
+}
+
+.anniu {
+  position: relative;
+  top: 38rpx;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+
+.delete {
+  position: relative;
+  top: -132rpx;
+  left: 140rpx;
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 40rpx;
+  font-size: 44rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  color: #1984ff;
+  background-color: #ffffff;
+  border: 3px solid #1984ff;
 }
 
 /*.tips{
@@ -147,6 +159,3 @@ font-size: 26rpx;
 text-align: left;
 font-family: PingFangSC-regular;
 }*/
-
-
- 

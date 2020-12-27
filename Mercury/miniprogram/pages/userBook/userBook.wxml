@@ -1,7 +1,7 @@
 <!--pages/userBook/userBook.wxml-->
 
 <view >
-    <view class='user_book'>使用手册</view>
+    <image class="user_book" src="https://pic.downk.cc/item/5fe749c83ffa7d37b3f16a39.png"></image>
     <view class='list_box' wx:for='{{list}}' wx:key='this' wx:for-item='parentItem' wx:for-index='parentIndex' >
         <view class='list'>
             <view class='list_name_box' catchtap='listTap' data-parentindex='{{parentIndex}}'>

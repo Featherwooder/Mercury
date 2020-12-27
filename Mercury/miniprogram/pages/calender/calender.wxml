@@ -1,44 +1,30 @@
 <!--pages/calender/calender.wxml-->
 
-<view
-class="habit"
-wx:for="{{habits}}"
-wx:for-item="item"
-wx:key="id">
+<view class="habit" wx:for="{{habits}}" wx:for-item="item" wx:key="id">
 
-<van-swipe-cell right-width="{{ 130 }}">
+  <van-swipe-cell right-width="{{ 160 }}">
+    <van-cell-group>
+      <view id="{{item.id}}" bindtap="calendar">
+        <view class="habit_main" bind:tap="onDisplay">
+          <!--图片-->
+          <image class="habit_img" src="{{item.img}}"></image>
+          <!--标题-->
+          <text class="habit_title">{{item.title}}</text>
+          <text class="habit_remark"> {{item.remark}}</text>
+        </view>
+      </view>
+    </van-cell-group>
 
-
-  
-  <van-cell-group>
-    <view id ="{{item.id}}" bindtap="calendar">
-    <view class="habit_main" bind:tap="onDisplay"  >
-    <!--图片-->
-  
-    <image class="habit_img" src="{{item.img}}"></image>
-  
-  <!--标题-->
-    <text class="habit_title">{{item.title}}</text>
-    <text class="habit_remark">  {{item.remark}}</text>
-</view>  
-</view>
-  </van-cell-group>
-
-  <view  slot="right" id="{{item.id}}" >
-
-    <view class="checkin" slot="right" id="{{item.id}}" bindtap="change_habit">
-    <text class="anniu"> 编辑</text>
-  </view>
-  <view class="delete" slot="right" id="{{item.id}}" bindtap="delete_habit">
-    <text class="anniu"> 删除</text>
-  </view>
- 
-  </view>
-
- 
-</van-swipe-cell>
+    <view slot="right" id="{{item.id}}">
+      <view class="checkin" slot="right" id="{{item.id}}" bindtap="change_habit">
+        <text class="anniu"> 编辑</text>
+      </view>
+      <view class="delete" slot="right" id="{{item.id}}" bindtap="delete_habit">
+        <text class="anniu"> 删除</text>
+      </view>
+    </view>
+  </van-swipe-cell>
 
 </view>
-
 <text class="topp"></text>
-<view class="myhabit"> 我的习惯</view>
+<image class="myhabit" src="https://pic.downk.cc/item/5fe749c83ffa7d37b3f16a47.png"></image>

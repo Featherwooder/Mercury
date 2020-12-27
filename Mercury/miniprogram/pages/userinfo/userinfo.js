@@ -30,6 +30,7 @@ Page({
   },
 
   user_image_preview(){
+    app.get_auth()
     wx-wx.previewImage({
       urls: [this.data.avatarUrl],
       current: 'current',

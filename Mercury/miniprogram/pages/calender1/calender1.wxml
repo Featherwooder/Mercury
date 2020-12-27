@@ -9,3 +9,5 @@
 <view bindanimationstart="setdate" ></view>
 
 <calendar selected="{{selected}}" bindgetdate="bindgetdate" bindselect="bindselect"  is-open='true' />
+<text class="blank"> </text>
+<text class="text1"> </text>

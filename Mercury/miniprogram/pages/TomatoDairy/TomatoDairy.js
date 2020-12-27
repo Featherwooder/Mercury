@@ -1,19 +1,17 @@
 // pages/calender/calender.js
 
+var util=require('../../util/util');//调用util中的获取时间函数
+
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
-  
   data: {
+    time:'',
     tomatos:[],
     date: '',
-    minDate:new Date(2020, 5, 1).getTime(),
-    maxDate:new Date(2021, 5, 1).getTime(),
-    count:0,
-    show: false,
-    showconfirm:false,
   },
 
   /**
@@ -21,21 +19,22 @@ Page({
    */
 
   onLoad: function (options) {
+    let that = this
+    console.log(app.globalData.openid + options.date)
+    this.setData({
+      date : options.date
+    })
+    
     const db=wx.cloud.database()
-    db.collection('tomatos').where({
-      publishInfo: {
-        country: ''
-      }
-    }).get({
+    db.collection('tomato').doc(app.globalData.openid + options.date).get({
       success: function(res) {
       // 输出 [{ "title": "The Catcher in the Rye", ... }]
-      console.log(res)
+      console.log(res.data.tomatos)
+      that.setData({
+        tomatos : res.data.tomatos
+    })
      }
     })
-    console.log(tomatos)
-    this.setData({
-      tomatos
-    }) 
   },
 
   /**

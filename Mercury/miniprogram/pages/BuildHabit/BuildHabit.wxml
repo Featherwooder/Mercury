@@ -1,9 +1,9 @@
 <view class="container">
-  <view class="build_habit_head">新建习惯</view>
+  <image class="build_habit_head" src="https://pic.downk.cc/item/5fe749c83ffa7d37b3f16a3f.png"></image>
   <view class="build_habit">
     <form bindsubmit="formSubmit">
       <view class="submit_butt">
-        <button class="submit_butt" size="mini" form-type="submit" id="save">保存</button>
+        <button class="submit_butt" size="mini" form-type="submit" id="save" >保存</button>
       </view>
       <view class="first_content">
         <text class="first_head">在一周中什么时候：</text>
@@ -43,14 +43,14 @@
       <view class="second_content">
         <text class="second_head">给习惯起个名字</text>
         <view class="name_background">
-          <input value="{{habit.title}}" class="name_input" name="name_input" type="text" maxlength="4" bindinput="habit_name" placeholder="例如卷卷卷（不超过四个字）"
+          <input value="{{habit.title}}" class="name_input" name="name_input" type="text" maxlength="6" bindinput="habit_name" placeholder="例如混元功法（不超过四个字）"
           placeholder-class="input_class" />
         </view>
       </view>
       <view class="third_content">
         <text class="third_head">写句话来激励自己</text>
         <view class="sentence_background">
-          <input value="{{habit.remark}}" class="sentence_input" name="sentence_input" maxlength="10" type="text" bindinput="habit_sentence" placeholder="例如我要当卷怪！（不超过十个字）" 
+          <input value="{{habit.remark}}" class="sentence_input" name="sentence_input" maxlength="10" type="text" bindinput="habit_sentence" placeholder="例如浑元形意太极拳（不超过十个字）" 
           placeholder-class="input_class"/>
         </view>
       </view>
